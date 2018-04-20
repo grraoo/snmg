@@ -1,0 +1,8 @@
+.svg-person {
+  &--girl2 {
+    display: none;
+    @media (min-width: $vpsm) {
+      display: inline-block;
+    }
+  }
+}

@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SnWall</title>
   <link href="css/style.css" rel="stylesheet">
-  </head>
+</head>
+
 <body>
   <main class="main">
-    <nav class="main-menu">
-      <a href="#">menu</a>
-    </nav>
+    <aside class="sidebar">
+      <a href="#" class="logo"><img src="img/logo-snwall-gray.png" alt="snwall logo"></a>
+      <nav class="main-menu">
+        <a class="main-menu__link main-menu__link--active" href="#">Возможности</a>
+        <a class="main-menu__link" href="#">Кейсы</a>
+        <a class="main-menu__link" href="#">Как это работает</a>
+        <a class="main-menu__link" href="#">Стоимость</a>
+        <a class="main-menu__link" href="#">Контакты</a>
+      </nav>
+    </aside>
     <section class="content">
-      <h1>SNWall — уникальный инструмент для&nbsp;общения с&nbsp;аудиторией через&nbsp;социальные сети</h1>
-      <p>SNWall выводит на экраны фотографии, видео и сообщения из Facebook, «ВКонтакте», Instagram, Twitter, Google+ и других социальных сетей</p>
+      <figure class="wall-video">
+        <video id="wall-video" src="#"></video>
+        <img src="img/slide-1.svg" alt="girl-ph" class="svg-person svg-person--girl1">
+        <img src="img/slide-2.svg" alt="girl-nb" class="svg-person svg-person--girl2">
+        <img src="img/slide-3.svg" alt="cat" class="svg-person svg-person--cat">
+        <img src="img/slide-4.svg" alt="man" class="svg-person svg-person--man">
+      </figure>
+      <div class="content__info">
+        <h2 class="content__header">SNWall — уникальный инструмент для&nbsp;общения с&nbsp;аудиторией через&nbsp;социальные сети</h2>
+        <p class="content__text">SNWall выводит на экраны фотографии, видео и сообщения из Facebook, «ВКонтакте», Instagram, Twitter, Google+ и других социальных сетей</p>
+      </div>
     </section>
   </main>
 </body>
+
 </html>

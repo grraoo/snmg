@@ -1,14 +1,10 @@
-import gameScreen from './game/game-screen';
-import {changeView} from './util';
-import PreviewView from "./preview-view";
+var main = (function () {
+'use strict';
 
-const preview = new PreviewView();
+var main = 0;
 
-changeView(preview.element);
+return main;
 
-preview.onAgreeClick = () => {
-  changeView(gameScreen);
-};
-
+}());
 
 //# sourceMappingURL=main.js.map

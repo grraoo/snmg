@@ -46,3 +46,18 @@ a:hover, a:active {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+.svg-person--girl2 {
+  display: none; }
+
+.main {
+  display: flex;
+  flex-direction: column; }
+
+@media (min-width: 720px) {
+    .svg-person--girl2 {
+      display: inline-block; } }
+
+@media (min-width: 1280px) {
+    .main {
+      flex-direction: row; } }

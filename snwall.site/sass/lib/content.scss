@@ -1,0 +1,21 @@
+.content {
+  padding-top: 30px;
+  @include media($vpmd) {
+    flex-grow: 1;
+  }
+  &__info {
+    margin-top: 120px;
+  }
+  &__header {
+    text-align: center;
+    font-size: 35px;
+    color: $c-darkgrey;
+    line-height: 1.2;
+  }
+  &__text {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 16px;
+    color: $c-darkgrey;
+  }
+}

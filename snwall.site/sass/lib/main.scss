@@ -4,5 +4,6 @@
 
   @include media($vpmd) {
     flex-direction: row;
+    min-height: 100%;
   }
 }

@@ -25,8 +25,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, main, menu, nav, section {
   display: block; }
 
+html,
 body {
-  line-height: 1; }
+  line-height: 1.4;
+  height: 100%; }
 
 ol, ul {
   list-style: none; }
@@ -47,17 +49,87 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.svg-person--girl2 {
-  display: none; }
+.svg-person {
+  position: absolute;
+  bottom: 0;
+  width: auto; }
+  .svg-person--girl1 {
+    height: 400px;
+    left: 0;
+    transform: translate(-150%, 30%); }
+  .svg-person--girl2 {
+    left: 0;
+    transform: translate(-33%, 40%);
+    display: none; }
+  .svg-person--cat {
+    height: 150px;
+    right: 0;
+    transform: translate(-150%, 50%); }
+  .svg-person--man {
+    height: 400px;
+    right: 0;
+    transform: translate(60%, 35%); }
 
 .main {
   display: flex;
   flex-direction: column; }
 
+.main-menu {
+  padding-top: 1em; }
+  .main-menu__link {
+    display: block;
+    padding: 0.5em 0;
+    color: #C0CED5;
+    text-decoration: none; }
+    .main-menu__link:hover {
+      background-color: #313537; }
+
+.sidebar {
+  background: #282D2E;
+  padding: 25px 37px; }
+
+.wall-video {
+  position: relative;
+  width: 600px;
+  margin: 0 auto; }
+  .wall-video::before {
+    content: '';
+    border-radius: 5px;
+    padding-top: 56.4461694%;
+    background-color: #0F86E1;
+    display: block; }
+  .wall-video__src {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.content {
+  padding-top: 30px; }
+  .content__info {
+    margin-top: 120px; }
+  .content__header {
+    text-align: center;
+    font-size: 35px;
+    color: #282D2E;
+    line-height: 1.2; }
+  .content__text {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 16px;
+    color: #282D2E; }
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
 @media (min-width: 720px) {
-    .svg-person--girl2 {
-      display: inline-block; } }
+      .svg-person--girl2 {
+        display: inline-block; } }
 
 @media (min-width: 1280px) {
     .main {
-      flex-direction: row; } }
+      flex-direction: row;
+      min-height: 100%; }
+    .content {
+      flex-grow: 1; } }

@@ -1,8 +1,33 @@
 .svg-person {
+  position: absolute;
+  bottom: 0;
+  width: auto;
+
+  &--girl1 {
+    height: 400px;
+    left: 0;
+    transform: translate(-150%, 30%);
+  }
+
   &--girl2 {
+    left: 0;
+    transform: translate(-33%, 40%);
     display: none;
+
     @media (min-width: $vpsm) {
       display: inline-block;
     }
+  }
+
+  &--cat {
+    height: 150px;
+    right: 0;
+    transform: translate(-150%, 50%);
+  }
+  
+  &--man {
+    height: 400px;
+    right: 0;
+    transform: translate(60%, 35%);
   }
 }

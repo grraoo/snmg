@@ -3,3 +3,11 @@
 @import 'helpers/mixins';
 @import 'lib/svg-person';
 @import 'lib/main';
+@import 'lib/main-menu';
+@import 'lib/sidebar';
+@import 'lib/wall-video';
+@import 'lib/content';
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

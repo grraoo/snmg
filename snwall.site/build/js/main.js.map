@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["main.js"],"sourcesContent":["import gameScreen from './game/game-screen';\nimport {changeView} from './util';\nimport PreviewView from \"./preview-view\";\n\nconst preview = new PreviewView();\n\nchangeView(preview.element);\n\npreview.onAgreeClick = () => {\n  changeView(gameScreen);\n};\n\n"],"file":"main.js"}

@@ -167,7 +167,7 @@ table {
   left: 50%;
   transform: translateX(-50%);
   width: 145%;
-  max-width: 100vw; }
+  max-width: 95vw; }
 
 .main {
   display: flex;
@@ -263,6 +263,8 @@ table {
   padding-top: 30px;
   color: #282D2E; }
   .content__info {
+    position: relative;
+    z-index: 2;
     margin-top: 55px;
     padding: 0 20px; }
   .content__header {

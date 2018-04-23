@@ -1,21 +1,64 @@
 .content {
   padding-top: 30px;
-  @include media($vpmd) {
-    flex-grow: 1;
-  }
+  color: $c-darkgrey;
+
   &__info {
-    margin-top: 120px;
+    margin-top: 55px;
+    padding: 0 20px;
   }
   &__header {
+    font-size: 4.8vw;
     text-align: center;
-    font-size: 35px;
-    color: $c-darkgrey;
     line-height: 1.2;
   }
   &__text {
     margin-top: 1em;
+    font-size: 14px;
     text-align: center;
-    font-size: 16px;
-    color: $c-darkgrey;
+  }
+
+  @include media($vpsm) {
+    &__info {
+      margin-top: 75px;
+    }
+    &__header {
+      font-size: 35px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  @include media($vpmd) {
+    flex-grow: 1;
+    &__info {
+      margin-top: 115px;
+    }
+    &__header {
+      font-size: 35px;
+    }
+  }
+  @include media($vplg) {
+    &__info {
+      margin-top: 125px;
+    }
+    &__header {
+      font-size: 40px;
+    }
+    &__text {
+      font-size: 20px;
+    }
+  }
+  @include media($vpxl) {
+    &__info {
+      margin-top: 140px;
+    }
+    &__header {
+      font-size: 50px;
+    }
+    &__text {
+      font-size: 24px;
+    }
   }
 }

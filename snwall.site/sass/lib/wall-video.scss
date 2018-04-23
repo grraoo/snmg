@@ -1,6 +1,5 @@
 .wall-video {
   position: relative;
-  width: 600px;
   margin: 0 auto;
   &::before {
     content: '';
@@ -9,12 +8,21 @@
     background-color: $c-blue;
     display: block;
   }
-
   &__src {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+  }
+  width: 80%;
+  @include media($vpmd) {
+    width: 600px;
+  }
+  @include media($vplg) {
+    width: 700px;
+  }
+  @include media($vpxl) {
+    width: 850px;
   }
 }

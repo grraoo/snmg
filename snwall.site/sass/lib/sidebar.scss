@@ -1,4 +1,18 @@
 .sidebar {
   background: $c-darkgrey;
   padding: 25px 37px;
+  height: 50px;
+
+  .logo,
+  .main-menu {
+    display: none;
+  }
+
+  @include media($vpmd) {
+    height: auto;
+    .logo,
+    .main-menu {
+      display: block;
+    }
+  }
 }

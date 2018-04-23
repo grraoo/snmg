@@ -1,19 +1,20 @@
 .sidebar {
   background: $c-darkgrey;
   padding: 10px 25px;
-  // height: 50px;
+
   position: fixed;
-  // bottom: calc(100% - 70px);
+
   top: 0;
   left: 0;
   right: 0;
-z-index: 2;
+  z-index: 2;
   // .logo,
   // .main-menu {
-  //   display: none;
-  // }
+    //   display: none;
+    // }
 
-  @include media($vpmd) {
+    @include media($vpmd) {
+    position: static;
     height: auto;
     .logo,
     .main-menu {

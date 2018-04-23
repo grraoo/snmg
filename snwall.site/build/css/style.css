@@ -179,11 +179,20 @@ body {
 
 @media (min-width: 1280px) {
     .main {
+      padding-top: 0;
       flex-direction: row;
       min-height: 100%; }
     .main-menu__toggle {
       display: none; }
+    .main-menu__caption {
+      padding-top: 20px; }
+    .main-menu__items {
+      margin-top: 30px;
+      max-height: none !important; }
+    .main-menu__link {
+      text-align: left; }
     .sidebar {
+      position: static;
       height: auto; }
       .sidebar .logo,
       .sidebar .main-menu {

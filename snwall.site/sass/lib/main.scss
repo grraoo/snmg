@@ -3,6 +3,7 @@
   flex-direction: column;
   padding-top: 50px;
   @include media($vpmd) {
+    padding-top: 0;
     flex-direction: row;
     min-height: 100%;
   }

@@ -1,3 +1,4 @@
+@import 'lib/font';
 @import 'helpers/reset';
 @import 'helpers/vars';
 @import 'helpers/mixins';
@@ -9,5 +10,5 @@
 @import 'lib/content';
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Fira Sans, sans-serif;
 }

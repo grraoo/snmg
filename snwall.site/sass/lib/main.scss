@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-
+  padding-top: 50px;
   @include media($vpmd) {
     flex-direction: row;
     min-height: 100%;

@@ -63,25 +63,76 @@ table {
 
 .main {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-top: 50px; }
 
 .main-menu {
-  padding-top: 1em; }
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; }
+  .main-menu * {
+    transition-duration: .3s;
+    transition-timing-function: linear; }
+  .main-menu__items {
+    overflow: hidden;
+    transition-duration: .3s; }
+  .main-menu__caption {
+    order: 1;
+    display: flex;
+    justify-content: space-between;
+    transition-duration: .3s;
+    align-items: center; }
   .main-menu__link {
     display: block;
     padding: 0.5em 0;
     color: #C0CED5;
-    text-decoration: none; }
+    text-decoration: none;
+    text-align: center; }
     .main-menu__link:hover {
       background-color: #313537; }
+  .main-menu__toggle {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 0;
+    width: 50px;
+    height: 40px;
+    position: relative; }
+    .main-menu__toggle::after, .main-menu__toggle::before {
+      content: '';
+      border-radius: 1px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: #C0CED5;
+      height: 6px;
+      transition-duration: .3s; }
+    .main-menu__toggle::after {
+      top: 0;
+      box-shadow: 0 17px 0 0 #C0CED5; }
+    .main-menu__toggle::before {
+      bottom: 0;
+      width: 70%; }
+  .main-menu--active .main-menu__toggle::before, .main-menu--active .main-menu__toggle::after {
+    top: 50%;
+    left: 50%;
+    width: 100%; }
+  .main-menu--active .main-menu__toggle::after {
+    box-shadow: none;
+    transform: translate(-50%, -50%) rotate(40deg); }
+  .main-menu--active .main-menu__toggle::before {
+    transform: translate(-50%, -50%) rotate(-40deg); }
+  .main-menu--active .main-menu__caption {
+    margin-top: 30px; }
 
 .sidebar {
   background: #282D2E;
-  padding: 25px 37px;
-  height: 50px; }
-  .sidebar .logo,
-  .sidebar .main-menu {
-    display: none; }
+  padding: 10px 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2; }
 
 .wall-video {
   position: relative;
@@ -130,6 +181,8 @@ body {
     .main {
       flex-direction: row;
       min-height: 100%; }
+    .main-menu__toggle {
+      display: none; }
     .sidebar {
       height: auto; }
       .sidebar .logo,

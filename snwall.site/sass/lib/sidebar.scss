@@ -1,12 +1,17 @@
 .sidebar {
   background: $c-darkgrey;
-  padding: 25px 37px;
-  height: 50px;
-
-  .logo,
-  .main-menu {
-    display: none;
-  }
+  padding: 10px 25px;
+  // height: 50px;
+  position: fixed;
+  // bottom: calc(100% - 70px);
+  top: 0;
+  left: 0;
+  right: 0;
+z-index: 2;
+  // .logo,
+  // .main-menu {
+  //   display: none;
+  // }
 
   @include media($vpmd) {
     height: auto;

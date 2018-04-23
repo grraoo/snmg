@@ -1,14 +1,85 @@
 .main-menu {
-  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+ * {
+   transition-duration: .3s;
+   transition-timing-function: linear;
+ }
+  &__items {
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  &__caption {
+    order: 1;
+    display: flex;
+    justify-content: space-between;
+    transition-duration: .3s;
+    align-items: center;
+  }
 
   &__link {
     display: block;
     padding: 0.5em 0;
     color: $c-lightgrey;
     text-decoration: none;
-
+    text-align: center;
     &:hover {
       background-color: $c-darkhover;
+    }
+  }
+  &__toggle {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 0;
+    width: 50px;
+    height: 40px;
+    position: relative;
+    &::after,
+    &::before {
+      content: '';
+      border-radius: 1px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: $c-lightgrey;
+      height: 6px;
+      transition-duration: .3s;
+    }
+    &::after {
+      top: 0;
+      box-shadow: 0 17px 0 0 $c-lightgrey;
+    }
+    &::before {
+      bottom: 0;
+      width: 70%;
+    }
+  }
+  &--active &__toggle{
+
+      &::before,
+      &::after {
+        top: 50%;
+        left: 50%;
+        width: 100%;
+      }
+      &::after {
+        box-shadow: none;
+        transform: translate(-50%, -50%) rotate(40deg);
+      }
+      &::before {
+        transform: translate(-50%, -50%) rotate(-40deg);
+      }
+
+  }
+  &--active &__caption {
+    margin-top: 30px;
+  }
+
+  @include media($vpmd) {
+    &__toggle {
+      display: none;
     }
   }
 }

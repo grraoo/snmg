@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1026" height="492" viewBox="0 0 1026 492">
-  <style>
-    * {
-      stroke-width: 5;
-    }
+<svg xmlns="http://www.w3.org/2000/svg" width="1026" height="492" viewBox="0 0 1026 492" style="width: 90vw">
+<style>
+  * {
+    stroke-width: 5;
+  }
+  #svg-girl-nb {
+    display: none;
+  }
+  @media (min-width: 720px) {
     #svg-girl-nb {
-      display: none;
+      display: block;
     }
-    @media (min-width: 720px) {
-      #svg-girl-nb {
-        display: block;
-      }
-      * {
-        stroke-width: 3;
-        stroke: 3;
-      }
+    * {
+      stroke-width: 3;
+      stroke: 3;
     }
-  </style>
+  }
+</style>
   <g fill="none" fill-rule="evenodd" transform="translate(1)">
     <g id="svg-girl-ph" transform="translate(0 13.239)">
       <path fill="#FFF" stroke="#C0CED5" stroke-width="2" d="M4.50704225,444.519341 C3.99143662,445.424678 1.28721127,453.831633 0.901408451,457.194053 C0.514704225,460.556473 1.8028169,468.058092 1.8028169,468.058092 C1.8028169,468.058092 3.99143662,471.291049 10.8169014,469.868765 C17.6414648,468.445576 27.0422535,464.436746 27.0422535,464.436746 C27.0422535,464.436746 47.9035493,453.185223 40.5633803,451.762034 C33.2232113,450.338845 20.603493,445.295215 18.0272676,443.614005 C15.4528451,441.932795 5.02174648,443.614005 4.50704225,444.519341 Z"/>

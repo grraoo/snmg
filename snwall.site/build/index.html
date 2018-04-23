@@ -12,13 +12,19 @@
 <body>
   <main class="main">
     <aside class="sidebar">
-      <a href="#" class="logo"><img src="img/logo-snwall-gray.png" alt="snwall logo" height="43" width="136"></a>
       <nav class="main-menu">
-        <a class="main-menu__link main-menu__link--active" href="#">Возможности</a>
-        <a class="main-menu__link" href="#">Кейсы</a>
-        <a class="main-menu__link" href="#">Как это работает</a>
-        <a class="main-menu__link" href="#">Стоимость</a>
-        <a class="main-menu__link" href="#">Контакты</a>
+        <section class="main-menu__caption">
+          <a href="#" class="logo"><img src="img/logo-snwall-gray.png" alt="snwall logo" height="43" width="136"></a>
+          <button class="main-menu__toggle main-menu__toggle--on">menu on/off</button>
+        </section>
+        <div class="main-menu__items">
+
+          <a class="main-menu__link main-menu__link--active" href="#">Возможности</a>
+          <a class="main-menu__link" href="#">Кейсы</a>
+          <a class="main-menu__link" href="#">Как это работает</a>
+          <a class="main-menu__link" href="#">Стоимость</a>
+          <a class="main-menu__link" href="#">Контакты</a>
+        </div>
       </nav>
     </aside>
     <section class="content">
@@ -27,18 +33,19 @@
         <img src="img/slider.svg" alt="all" class="svg-person">
         <img src="img/slide-1.svg" alt="girl-ph" class="svg-person svg-person--girl1" hidden>
         <img src="img/slide-2.svg" alt="girl-nb" class="svg-person svg-person--girl2" hidden>
-        <img src="img/slide-3.svg" alt="cat" class="svg-person svg-person--cat" hidden> 
-        
+        <img src="img/slide-3.svg" alt="cat" class="svg-person svg-person--cat" hidden>
+
 
         <img src="img/slide-4.svg" alt="man" class="svg-person svg-person--man" hidden>
       </figure>
       <div class="content__info">
-        <h2 class="content__header">SNWall — уникальный инструмент<br>для&nbsp;общения с&nbsp;аудиторией через&nbsp;социальные сети</h2>
-        <p class="content__text">SNWall выводит на экраны фотографии, видео и сообщения из Facebook,<br>
+        <h2 class="content__header">SNWall — уникальный инструмент для&nbsp;общения с&nbsp;аудиторией через&nbsp;социальные сети</h2>
+        <p class="content__text">SNWall выводит на экраны фотографии, видео и сообщения из Facebook,
           «ВКонтакте», Instagram, Twitter, Google+ и других социальных сетей</p>
       </div>
     </section>
   </main>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -4,34 +4,30 @@
   left: 50%;
   transform: translateX(-50%);
   width: 145%;
-  max-width: 95vw
-  // display: none;
+  height: auto;
+  max-width: 95vw;
 
-  // &--girl1 {
-  //   height: 400px;
-  //   left: 0;
-  //   transform: translate(-150%, 30%);
-  // }
 
-  // &--girl2 {
-  //   left: 0;
-  //   transform: translate(-33%, 40%);
-  //   display: none;
+  #svg-girl-nb {
+    display: none;
+  }
 
-  //   @media (min-width: $vpsm) {
-  //     // display: inline-block;
-  //   }
-  // }
+  @include media($vpsm) {
+    #svg-girl-nb {
+      display: block;
+    }
+  }
+  path, polyline {
+    stroke-width: 4;
 
-  // &--cat {
-  //   height: 150px;
-  //   right: 0;
-  //   transform: translate(-150%, 50%);
-  // }
-
-  // &--man {
-  //   height: 400px;
-  //   right: 0;
-  //   transform: translate(60%, 35%);
-  // }
+    @include media($vpsm) {
+      stroke-width: 3;
+    }
+    @include media($vpmd) {
+      stroke-width: 2.5;
+    }
+    @include media($vplg) {
+      stroke-width: 2;
+    }
+  }
 }

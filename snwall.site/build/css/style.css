@@ -280,6 +280,10 @@ table {
     font-size: 14px;
     text-align: center; }
 
+.unit {
+  padding: 80px;
+  border-bottom: 1px solid #D7D7D7; }
+
 body {
   font-family: Fira Sans, sans-serif; }
 

@@ -1,0 +1,56 @@
+.scroller {
+  display: flex;
+  margin: 0 -10px;
+  margin-right: -80px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  &__item {
+    height: 500px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    &:last-of-type {
+      padding-right: 100px;
+      margin-right: 0;
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+
+    &--text {
+      min-width: 430px;
+      flex-basis: 430px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #F7F1E2;
+    }
+  }
+  &__number {
+    font-size: 88px;
+  }
+}
+
+
+.logo-scroller {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: 150px;
+  margin: 0 -80px;
+
+  img {
+    height: 100%;
+    width: auto;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

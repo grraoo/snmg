@@ -376,6 +376,49 @@ table {
   text-transform: uppercase;
   margin: .5em 0; }
 
+.scroller {
+  display: flex;
+  margin: 0 -10px;
+  margin-right: -80px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .scroller__item {
+    height: 500px;
+    margin-right: 20px;
+    margin-bottom: 20px; }
+    .scroller__item:last-of-type {
+      padding-right: 100px;
+      margin-right: 0; }
+    .scroller__item img {
+      height: 100%;
+      width: auto; }
+    .scroller__item--text {
+      min-width: 430px;
+      flex-basis: 430px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #F7F1E2; }
+  .scroller__number {
+    font-size: 88px; }
+
+.logo-scroller {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  height: 150px;
+  margin: 0 -80px; }
+  .logo-scroller img {
+    height: 100%;
+    width: auto; }
+    .logo-scroller img:not(:last-child) {
+      margin-right: 10px; }
+
 body {
   font-family: Fira Sans, sans-serif; }
 

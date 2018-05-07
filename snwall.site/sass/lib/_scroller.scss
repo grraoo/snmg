@@ -11,6 +11,7 @@
     height: 500px;
     margin-right: 20px;
     margin-bottom: 20px;
+
     &:last-of-type {
       padding-right: 100px;
       margin-right: 0;
@@ -33,11 +34,11 @@
       background-color: #F7F1E2;
     }
   }
+
   &__number {
     font-size: 88px;
   }
 }
-
 
 .logo-scroller {
   display: flex;
@@ -49,6 +50,7 @@
   img {
     height: 100%;
     width: auto;
+
     &:not(:last-child) {
       margin-right: 10px;
     }

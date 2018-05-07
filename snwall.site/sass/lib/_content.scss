@@ -12,13 +12,17 @@
     padding: 0 20px;
   }
   &__header {
-    font-size: 50px;
+    font-size: 4.5vw;
     letter-spacing: 0;
-    line-height: 55px;
+    line-height: 1.4;
     text-align: center;
-
+    font-weight: 600;
+    margin-bottom: .5em;
     &--left {
       text-align: left;
+    }
+    &--regular {
+      font-weight: 400;
     }
   }
   &__text {

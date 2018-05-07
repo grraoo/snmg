@@ -1,17 +1,13 @@
 .sidebar {
   background: $c-darkgrey;
-  padding: 10px 25px;
+  padding: 0 15px;
 
   position: fixed;
 
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
-  // .logo,
-  // .main-menu {
-    //   display: none;
-    // }
+  z-index: 3;
 
     @include media($vpmd) {
     position: static;

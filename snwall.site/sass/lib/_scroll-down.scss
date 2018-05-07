@@ -1,0 +1,25 @@
+.scroll-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border-left: 2px solid $c-lightgrey;
+    border-bottom: 2px solid $c-lightgrey;
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,7 +1,8 @@
 .unit {
   padding: 80px;
   border-bottom: 1px solid $c-greyborder;
-
+  text-align: center;
+  position: relative;
   &--advantages {
     padding-left: 0;
     padding-right: 0;

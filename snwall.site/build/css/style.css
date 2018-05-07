@@ -182,7 +182,13 @@ table {
 .main-menu {
   display: flex;
   flex-direction: column;
-  align-items: stretch; }
+  align-items: stretch;
+  position: fixed;
+  background: #282D2E;
+  position: -webkit-sticky;
+  position: sticky;
+  padding: 10px;
+  top: 10px; }
   .main-menu * {
     transition-timing-function: linear; }
   .main-menu__items {
@@ -239,12 +245,12 @@ table {
 
 .sidebar {
   background: #282D2E;
-  padding: 10px 25px;
+  padding: 0 15px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2; }
+  z-index: 3; }
 
 .wall-video {
   position: relative;
@@ -275,12 +281,16 @@ table {
     margin-top: 55px;
     padding: 0 20px; }
   .content__header {
-    font-size: 50px;
+    font-size: 4.5vw;
     letter-spacing: 0;
-    line-height: 55px;
-    text-align: center; }
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: .5em; }
     .content__header--left {
       text-align: left; }
+    .content__header--regular {
+      font-weight: 400; }
   .content__text {
     margin-top: 1em;
     font-size: 14px;
@@ -288,7 +298,9 @@ table {
 
 .unit {
   padding: 80px;
-  border-bottom: 1px solid #D7D7D7; }
+  border-bottom: 1px solid #D7D7D7;
+  text-align: center;
+  position: relative; }
   .unit--advantages {
     padding-left: 0;
     padding-right: 0; }
@@ -336,7 +348,8 @@ table {
   justify-content: flex-end;
   padding-right: 80px;
   padding-left: 0;
-  padding-top: 80px; }
+  padding-top: 80px;
+  text-align: left; }
   .advantage:not(:last-of-type) {
     padding-bottom: 80px;
     border-bottom: 1px solid #D7D7D7; }
@@ -418,6 +431,32 @@ table {
     width: auto; }
     .logo-scroller img:not(:last-child) {
       margin-right: 10px; }
+
+.blue-text {
+  color: #0F86E1; }
+
+.scroll-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer; }
+  .scroll-down::after {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    border-left: 2px solid #C0CED5;
+    border-bottom: 2px solid #C0CED5;
+    width: 20px;
+    height: 20px; }
 
 body {
   font-family: Fira Sans, sans-serif; }

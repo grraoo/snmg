@@ -1,4 +1,9 @@
 .unit {
   padding: 80px;
   border-bottom: 1px solid $c-greyborder;
+
+  &--advantages {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

@@ -265,16 +265,22 @@ table {
 
 .content {
   padding-top: 30px;
-  color: #282D2E; }
+  color: #282D2E;
+  width: 1170px;
+  max-width: 100%;
+  margin: 0 auto; }
   .content__info {
     position: relative;
     z-index: 2;
     margin-top: 55px;
     padding: 0 20px; }
   .content__header {
-    font-size: 4.8vw;
-    text-align: center;
-    line-height: 1.2; }
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: 55px;
+    text-align: center; }
+    .content__header--left {
+      text-align: left; }
   .content__text {
     margin-top: 1em;
     font-size: 14px;
@@ -283,6 +289,86 @@ table {
 .unit {
   padding: 80px;
   border-bottom: 1px solid #D7D7D7; }
+  .unit--advantages {
+    padding-left: 0;
+    padding-right: 0; }
+
+.works {
+  display: flex;
+  margin: 0 -20px;
+  counter-reset: work; }
+
+.work-stage {
+  position: relative;
+  flex-basis: 33%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .work-stage__img-wrap {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: flex-end; }
+  .work-stage__img {
+    width: 300px; }
+  .work-stage__header {
+    margin-top: 80px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: center; }
+  .work-stage__text {
+    font-size: 20px;
+    text-align: center; }
+  .work-stage::after {
+    counter-increment: work;
+    content: counter(work);
+    position: absolute;
+    top: 330px;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0.5; }
+
+.advantage {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 80px;
+  padding-left: 0;
+  padding-top: 80px; }
+  .advantage:not(:last-of-type) {
+    padding-bottom: 80px;
+    border-bottom: 1px solid #D7D7D7; }
+  .advantage:nth-child(even) {
+    flex-direction: row-reverse;
+    padding-right: 0;
+    padding-left: 80px; }
+    .advantage:nth-child(even) .advantage__img-wrap {
+      flex-direction: row-reverse; }
+    .advantage:nth-child(even) .advantage__info {
+      margin-right: 95px;
+      margin-left: 0; }
+  .advantage__info {
+    width: 800px;
+    margin-left: 95px;
+    margin-right: 0; }
+  .advantage__img-wrap {
+    width: calc(100% - 800px);
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end; }
+    .advantage__img-wrap--center {
+      justify-content: center; }
+    .advantage__img-wrap img {
+      max-height: 800px;
+      width: auto; }
+
+.rubric {
+  opacity: 0.5;
+  font-size: 24px;
+  letter-spacing: 4.5px;
+  text-transform: uppercase; }
 
 body {
   font-family: Fira Sans, sans-serif; }

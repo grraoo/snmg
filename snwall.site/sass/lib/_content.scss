@@ -1,6 +1,9 @@
 .content {
   padding-top: 30px;
   color: $c-darkgrey;
+  width: 1170px;
+  max-width: 100%;
+  margin: 0 auto;
 
   &__info {
     position: relative;
@@ -9,9 +12,14 @@
     padding: 0 20px;
   }
   &__header {
-    font-size: 4.8vw;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: 55px;
     text-align: center;
-    line-height: 1.2;
+
+    &--left {
+      text-align: left;
+    }
   }
   &__text {
     margin-top: 1em;

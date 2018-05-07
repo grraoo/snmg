@@ -1,0 +1,47 @@
+.works {
+  display: flex;
+  margin: 0 -20px;
+  counter-reset: work;
+}
+
+.work-stage {
+  position: relative;
+  flex-basis: 33%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img-wrap {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  &__img {
+    width: 300px;
+  }
+
+  &__header{
+    margin-top: 80px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &::after {
+    counter-increment: work;
+    content: counter(work);
+    position: absolute;
+    top: 330px;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0.5;
+  }
+}

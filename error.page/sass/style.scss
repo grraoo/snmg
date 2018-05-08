@@ -1,0 +1,37 @@
+@import 'lib/font';
+@import 'helpers/reset';
+@import 'helpers/vars';
+@import 'helpers/mixins';
+
+
+body {
+  font-family: Fira Sans, sans-serif;
+}
+
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+
+  img {
+    max-width: 90%;
+  }
+}
+
+.headline {
+  font-size: 35px;
+  color: $c-darkgrey;
+  text-align: center;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+.text {
+  color: $c-darkgrey;
+  font-size: 16px;
+  text-align: center;
+}

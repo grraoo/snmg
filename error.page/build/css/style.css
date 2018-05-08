@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-thin.woff2") format("woff2"), url("../fonts/firasans-thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-thinitalic.woff2") format("woff2"), url("../fonts/firasans-thinitalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-extralight.woff2") format("woff2"), url("../fonts/firasans-extralight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-extralightitalic.woff2") format("woff2"), url("../fonts/firasans-extralightitalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-light.woff2") format("woff2"), url("../fonts/firasans-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-lightitalic.woff2") format("woff2"), url("../fonts/firasans-lightitalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-regular.woff2") format("woff2"), url("../fonts/firasans-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-italic.woff2") format("woff2"), url("../fonts/firasans-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-semibold.woff2") format("woff2"), url("../fonts/firasans-semibold.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-semibolditalic.woff2") format("woff2"), url("../fonts/firasans-semibolditalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-medium.woff2") format("woff2"), url("../fonts/firasans-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-mediumitalic.woff2") format("woff2"), url("../fonts/firasans-mediumitalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-bold.woff2") format("woff2"), url("../fonts/firasans-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-bolditalic.woff2") format("woff2"), url("../fonts/firasans-bolditalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-extrabold.woff2") format("woff2"), url("../fonts/firasans-extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-extrabolditalic.woff2") format("woff2"), url("../fonts/firasans-extrabolditalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-black.woff2") format("woff2"), url("../fonts/firasans-black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url("../fonts/firasans-blackitalic.woff2") format("woff2"), url("../fonts/firasans-blackitalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic; }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+html,
+body {
+  line-height: 1.4;
+  height: 100%;
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
+a:hover, a:active {
+  outline: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: Fira Sans, sans-serif; }
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 10px; }
+  .main img {
+    max-width: 90%; }
+
+.headline {
+  font-size: 35px;
+  color: #282D2E;
+  text-align: center;
+  font-weight: bold;
+  margin: 1em 0; }
+
+.text {
+  color: #282D2E;
+  font-size: 16px;
+  text-align: center; }

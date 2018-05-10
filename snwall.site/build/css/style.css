@@ -458,6 +458,99 @@ table {
     width: 20px;
     height: 20px; }
 
+.contacts {
+  display: flex;
+  min-height: 100vh; }
+  .contacts .content__header {
+    text-align: left; }
+  .contacts__info {
+    padding: 30px;
+    width: 40%;
+    flex-basis: 40%; }
+  .contacts__item {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 1em; }
+    .contacts__item::before {
+      content: "";
+      background-image: url("../img/contacts-icons.png");
+      background-repeat: no-repeat;
+      background-size: 40px 15px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+    .contacts__item--address::before {
+      width: 10px;
+      height: 15px;
+      left: 3px; }
+    .contacts__item--email::before {
+      width: 16px;
+      height: 15px;
+      left: 0;
+      background-position: -24px 0; }
+    .contacts__item--phone::before {
+      width: 14px;
+      height: 15px;
+      left: 2px;
+      background-position: -10px 0; }
+  .contacts__map {
+    background: #777;
+    flex-grow: 1;
+    overflow: hidden; }
+    .contacts__map img {
+      min-height: 100%; }
+
+.btn {
+  display: inline-block;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 1;
+  transition: all .2s ease-in-out;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  padding: 10px 24px;
+  font-size: 20px; }
+  .btn--blue {
+    background: #0F86E1;
+    color: #fff; }
+    .btn--blue:hover {
+      background: #0b6ea2; }
+  .btn:disabled {
+    background-color: #666;
+    opacity: .6;
+    pointer-events: none; }
+
+.feedback {
+  display: block; }
+  .feedback__headline {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold; }
+  .feedback__input {
+    height: 40px;
+    width: 100%;
+    max-width: 350px;
+    line-height: 40px;
+    padding: 2px 0 0 15px;
+    border: 1px solid #c0ced5;
+    font-size: 16px;
+    margin: 0;
+    border-radius: 4px;
+    margin-bottom: 1em;
+    display: block; }
+    .feedback__input--area {
+      width: 100%;
+      max-width: 480px;
+      line-height: 25px;
+      min-height: 120px;
+      padding: 8px 15px 0 15px; }
+
 body {
   font-family: Fira Sans, sans-serif; }
 

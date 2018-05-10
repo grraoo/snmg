@@ -157,7 +157,15 @@
         </article>
         <article class="advantage">
           <div class="advantage__img-wrap">
-            <img src="img/feature-illustration-3.png" alt="" width="1055" height="696" class="advantage__img">
+            <div class="slider">
+              <div class="slider__item">
+                <img src="img/feature-illustration-3.png" alt="" width="1055" height="696" class="advantage__img">
+              </div>
+              <div class="slider__item">
+                <img style="filter: hue-rotate(120deg)" src="img/feature-illustration-3.png" alt="" width="1055" height="696" class="advantage__img">
+                <img style="filter: hue-rotate(240deg)" src="img/feature-illustration-3.png" alt="" width="1055" height="696" class="advantage__img">
+              </div>
+            </div>
             <!--тут будет слайдер -->
           </div>
           <div class="advantage__info">
@@ -213,7 +221,24 @@
         <aside class="rubric">Другие примеры использования</aside>
         <h2 class="content__header">SNWall на концертах, шоу и фестивалях</h2>
         <p>В 2017 году SNWall транслировал сообщения из социальных сетей на ежегодной пресс-конференции с президентом России В. В. Путиным.</p>
-        <div class="slider"></div>
+        <div class="scroller">
+          <div class="scroller__item">
+            <img src="//placehold.it/800x600" alt="">
+          </div>
+          <div class="scroller__item scroller__item--text">
+            <p class="scroller__number">31 854</p>
+            <p class="scroller__text">сообщений с хэштегами мероприятия было опубликовано на ПМЭФ 2017</p>
+          </div>
+          <div class="scroller__item">
+            <img src="//placehold.it/400x600" alt="">
+          </div>
+          <div class="scroller__item">
+            <img src="//placehold.it/400x600" alt="">
+          </div>
+          <div class="scroller__item">
+            <img src="//placehold.it/800x600" alt="">
+          </div>
+        </div>
       </section>
       <section class="unit unit--clients">
         <aside class="rubric">Наши клиенты</aside>
@@ -238,8 +263,48 @@
           <img src="//placehold.it/300x150?text=Logo" alt="">
           <img src="//placehold.it/300x150?text=Logo" alt="">
         </div>
+        <div class="logo-scroller">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+        </div>
+        <div class="logo-scroller">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+          <img src="//placehold.it/300x150?text=Logo" alt="">
+        </div>
       </section>
-      <footer class="content contacts">
+      <footer class="contacts">
         <section class="contacts__info">
           <h2 class="content__header">Контактная информация</h2>
           <div class="contacts__items">
@@ -251,12 +316,12 @@
             <p class="feedback__headline"><b>Свяжитесь с нами</b></p>
               <input type="text" class="feedback__input" name="name" placeholder="Ваше имя">
               <input type="text" class="feedback__input" name="contact" placeholder="Телефон или адрес эл. почты для ответа">
-              <textarea type="text" class="feedback__input" name="contact" placeholder="Расскажите о вашем мероприятии или задайте вопросы"></textarea>
+              <textarea type="text" class="feedback__input feedback__input--area"  name="contact" placeholder="Расскажите о вашем мероприятии или задайте вопросы"></textarea>
               <div id="grecaptcha"></div>
-              <button class="btn btn__disabled"></button>
+              <button class="btn btn--blue" type="submit">Отправить запрос</button>
           </form>
         </section>
-        <section class="contacts__map" id="map"></section>
+        <section class="contacts__map" id="contacts-map"><img src="img/map.png" alt=""></section>
       </footer>
     </section>
   </main>

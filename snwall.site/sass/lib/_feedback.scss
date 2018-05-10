@@ -1,0 +1,35 @@
+.feedback {
+  display: block;
+
+  &__headline {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+  }
+
+  &__input {
+      height: 40px;
+      width: 100%;
+      max-width: 350px;
+      line-height: 40px;
+      padding: 2px 0 0 15px;
+      border: 1px solid #c0ced5;
+      font-size: 16px;
+      margin: 0;
+      border-radius: 4px;
+      margin-bottom: 1em;
+      display: block;
+
+      &--area {
+        width: 100%;
+        max-width: 480px;
+        line-height: 25px;
+        min-height: 120px;
+        padding: 8px 15px 0 15px;
+      }
+  }
+}

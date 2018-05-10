@@ -157,14 +157,36 @@
         </article>
         <article class="advantage">
           <div class="advantage__img-wrap">
-            <div class="slider">
-              <div class="slider__item">
+            <f class="slider">
+              <div data-slide="slide-1" class="slider__item">
                 <img src="img/feature-illustration-3.png" alt="" width="1055" height="696" class="advantage__img">
               </div>
-              <div class="slider__item">
-                <img style="filter: hue-rotate(120deg)" src="img/feature-illustration-3.png" alt="" width="1055" height="696" class="advantage__img">
-                <img style="filter: hue-rotate(240deg)" src="img/feature-illustration-3.png" alt="" width="1055" height="696" class="advantage__img">
+              <div data-slide="slide-2" class="slider__item">
+                <img style="filter: hue-rotate(90deg)" src="img/feature-illustration-3.png" alt="" width="1055" height="696" class="advantage__img">
               </div>
+              <div data-slide="slide-3" class="slider__item">
+                <img style="filter: hue-rotate(180deg)" src="img/feature-illustration-3.png" alt="" width="1055" height="696" class="advantage__img">
+              </div>
+              <div data-slide="slide-4" class="slider__item">
+                <img style="filter: hue-rotate(270deg)" src="img/feature-illustration-3.png" alt="" width="1055" height="696" class="advantage__img">
+              </div>
+              <fieldset id="slider__controls-wrap">
+                <div class="slider__controls">
+                  <input class="slider__control-radio" type="radio" id="slide-1" name="slider">
+                  <label for="slide-1" class="slider__control slider__control--1" data-slide="1">
+                  </label>
+                  <input class="slider__control-radio" type="radio" id="slide-2" name="slider">
+                  <label for="slide-2" class="slider__control slider__control--2" data-slide="2">
+                  </label>
+                  <input class="slider__control-radio" type="radio" id="slide-3" name="slider">
+                  <label for="slide-3" class="slider__control slider__control--3" data-slide="3">
+                  </label>
+                  <input class="slider__control-radio" type="radio" id="slide-4" name="slider">
+                  <label for="slide-4" class="slider__control slider__control--4" data-slide="4">
+                  </label>
+                </div>
+
+              </fieldset>
             </div>
             <!--тут будет слайдер -->
           </div>

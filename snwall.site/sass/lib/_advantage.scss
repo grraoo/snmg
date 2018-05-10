@@ -33,6 +33,7 @@
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
+    align-self: stretch;
     &--center {
       justify-content: center;
     }

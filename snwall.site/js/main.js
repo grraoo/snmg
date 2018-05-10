@@ -1,4 +1,11 @@
-export default 0;
+import Slider from "./slider/slider";
+
+const initialSlides = [...document.querySelectorAll(`.slider__item`)];
+const initialControls = document.querySelector(`#slider__controls-wrap`);
+
+const advSlider = new Slider(initialSlides, initialControls, 3000);
+
+advSlider.init();
 
 const menu = document.querySelector(`.main-menu`);
 const menuToggle = menu.querySelector(`.main-menu__toggle`);

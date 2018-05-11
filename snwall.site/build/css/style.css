@@ -390,21 +390,18 @@ table {
   text-transform: uppercase;
   margin: .5em 0; }
 
+.ab_scroller-border {
+  background: none !important;
+  display: none !important; }
+
 .scroller {
-  display: flex;
   margin: 0 -10px;
-  margin-right: -80px;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: visible !important;
   margin-top: 20px;
   margin-bottom: 20px; }
   .scroller__item {
     height: 500px;
-    margin-right: 20px;
-    margin-bottom: 20px; }
-    .scroller__item:last-of-type {
-      padding-right: 100px;
-      margin-right: 0; }
+    margin: 0 10px; }
     .scroller__item img {
       height: 100%;
       width: auto; }
@@ -423,15 +420,13 @@ table {
 
 .logo-scroller {
   display: flex;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow: visible !important;
   height: 150px;
-  margin: 0 -80px; }
+  margin: 20px -80px; }
   .logo-scroller img {
     height: 100%;
-    width: auto; }
-    .logo-scroller img:not(:last-child) {
-      margin-right: 10px; }
+    width: auto;
+    margin: 10px; }
 
 .blue-text {
   color: #0F86E1; }

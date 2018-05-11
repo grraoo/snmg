@@ -1,27 +1,33 @@
+.ab_scroller-border {
+  background: none !important;
+  display: none !important;
+}
+
 .scroller {
-  display: flex;
+  // display: flex;
   margin: 0 -10px;
-  margin-right: -80px;
-  overflow-x: auto;
-  overflow-y: hidden;
+  // margin-right: -80px;
+  // overflow-x: auto;
+  overflow: visible !important;
   margin-top: 20px;
   margin-bottom: 20px;
 
   &__item {
     height: 500px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    // margin-right: 20px;
+    // margin-bottom: 20px;
+    // padding: 0 10px;
 
-    &:last-of-type {
-      padding-right: 100px;
-      margin-right: 0;
-    }
+    // &:last-of-type {
+    //   margin-right: 0;
+    // }
 
     img {
       height: 100%;
       width: auto;
     }
 
+    margin: 0 10px;
     &--text {
       min-width: 430px;
       flex-basis: 430px;
@@ -42,17 +48,20 @@
 
 .logo-scroller {
   display: flex;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  // overflow-y: visible;
+  // overflow-x: scroll;
+  overflow: visible !important;
   height: 150px;
-  margin: 0 -80px;
+  margin: 20px -80px;
+
 
   img {
     height: 100%;
     width: auto;
+    margin: 10px;
+
 
     &:not(:last-child) {
-      margin-right: 10px;
     }
   }
 }

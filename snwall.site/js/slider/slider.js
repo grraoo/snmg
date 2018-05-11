@@ -1,9 +1,8 @@
 class Slider {
   /**
-   *
-   * @param {Array} slides //DOM nodes of slides;
-   * @param {DOM node} controls //fieldset of radios;
-   * @param {Number} timeOut // timeout (ms) for autoswitch in ;
+   * @param {Array} slides DOM-nodes of slides.
+   * @param {Object} controls DOM-node of fieldset with control radios.
+   * @param {Number} timeOut timeout (ms) for autoswitch.
    */
   constructor(slides, controls, timeOut) {
     this._slides = slides;

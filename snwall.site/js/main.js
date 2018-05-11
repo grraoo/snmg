@@ -24,6 +24,19 @@ const scroller3 = new Scroller({
   anchors: `hidden`,
   scrollbar: `hidden`
 });
+console.log(scroller1);
+const scrollLogos = () => {
+  scroller3.scrollTo(`start`);
+  scroller2.scrollTo(`end`);
+  scroller1.scrollTo(`start`);
+  setTimeout(() => {
+    scroller3.scrollTo(`end`);
+    scroller2.scrollTo(`start`);
+    scroller1.scrollTo(`end`);
+  }, 8000);
+};
+scrollLogos();
+setInterval(scrollLogos, 17000);
 
 // const scroller2 = new Scroller({
 //   el: document.querySelector(`#scroller2`),

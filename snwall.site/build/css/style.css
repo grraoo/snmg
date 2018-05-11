@@ -422,7 +422,9 @@ table {
   display: flex;
   overflow: visible !important;
   height: 150px;
-  margin: 20px -80px; }
+  margin: 0px -80px; }
+  .logo-scroller .ab_scroller-strip {
+    transition-duration: 7s; }
   .logo-scroller img {
     margin: 10px;
     height: 100%;

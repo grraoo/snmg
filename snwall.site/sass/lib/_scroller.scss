@@ -47,12 +47,15 @@
 }
 
 .logo-scroller {
+  .ab_scroller-strip {
+    transition-duration: 7s;
+  }
   display: flex;
   // overflow-y: visible;
   // overflow-x: scroll;
   overflow: visible !important;
   height: 150px;
-  margin: 20px -80px;
+  margin: 0px -80px;
 
 
   img {

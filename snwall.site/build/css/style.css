@@ -424,9 +424,11 @@ table {
   height: 150px;
   margin: 20px -80px; }
   .logo-scroller img {
+    margin: 10px;
     height: 100%;
     width: auto;
-    margin: 10px; }
+    display: block;
+    height: 150px; }
 
 .blue-text {
   color: #0F86E1; }
@@ -585,7 +587,9 @@ table {
       background: blue; }
 
 body {
-  font-family: Fira Sans, sans-serif; }
+  font-family: Fira Sans, sans-serif;
+  overflow-x: hidden;
+  width: 100%; }
 
 @media (min-width: 700px) {
     .svg-person #svg-girl-nb {

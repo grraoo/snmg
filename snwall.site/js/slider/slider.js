@@ -1,4 +1,4 @@
-class Slider {
+export default class Slider {
   /**
    * @param {Array} slides DOM-nodes of slides.
    * @param {Object} controls DOM-node of fieldset with control radios.
@@ -60,5 +60,3 @@ class Slider {
     this._controls.querySelectorAll(`input`)[slideIndex].checked = true;
   }
 }
-
-export default Slider;

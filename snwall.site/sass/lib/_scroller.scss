@@ -56,12 +56,15 @@
 
 
   img {
+    margin: 10px;
     height: 100%;
     width: auto;
-    margin: 10px;
+    display: block;
+    height: 150px;
 
 
-    &:not(:last-child) {
-    }
+
+    // &:not(:last-child) {
+    // }
   }
 }

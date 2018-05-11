@@ -12,17 +12,17 @@ advSlider.init();
 const scroller1 = new Scroller({
   el: document.querySelector(`#logo1`),
   anchors: `hidden`,
-  scrollbar: `visible`
+  scrollbar: `hidden`
 });
 const scroller2 = new Scroller({
   el: document.querySelector(`#logo2`),
   anchors: `hidden`,
-  scrollbar: `visible`
+  scrollbar: `hidden`
 });
 const scroller3 = new Scroller({
   el: document.querySelector(`#logo3`),
   anchors: `hidden`,
-  scrollbar: `visible`
+  scrollbar: `hidden`
 });
 
 // const scroller2 = new Scroller({

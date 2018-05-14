@@ -1,42 +1,9 @@
-import Slider from "./slider/slider";
-import scrollerPlugin from "./slider/scroller.min.js";
+import advSlider from "./slider/slider";
 import initMenu from "./menu/menu";
+import runScroller from "./scroll/run-scroller";
 
-scrollerPlugin();
-const Scroller = window.Scroller;
+initMenu();
 
-const menu = document.querySelector(`.main-menu`);
-initMenu(menu);
-
-const initialSlides = [...document.querySelectorAll(`.slider__item`)];
-const initialControls = document.querySelector(`#slider__controls-wrap`);
-const advSlider = new Slider(initialSlides, initialControls, 5000);
 advSlider.init();
 
-const scroller1 = new Scroller({
-  el: document.querySelector(`#logo1`),
-  anchors: `hidden`,
-  scrollbar: `hidden`
-});
-const scroller2 = new Scroller({
-  el: document.querySelector(`#logo2`),
-  anchors: `hidden`,
-  scrollbar: `hidden`
-});
-const scroller3 = new Scroller({
-  el: document.querySelector(`#logo3`),
-  anchors: `hidden`,
-  scrollbar: `hidden`
-});
-const scrollLogos = () => {
-  scroller3.scrollTo(`start`);
-  scroller2.scrollTo(`end`);
-  scroller1.scrollTo(`start`);
-  setTimeout(() => {
-    scroller3.scrollTo(`end`);
-    scroller2.scrollTo(`start`);
-    scroller1.scrollTo(`end`);
-  }, 8000);
-};
-scrollLogos();
-setInterval(scrollLogos, 17000);
+runScroller();

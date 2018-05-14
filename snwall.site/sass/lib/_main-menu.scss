@@ -4,7 +4,8 @@
   align-items: stretch;
   position: fixed;
   background: $c-darkgrey;
-  position: sticky;
+left: 0;
+right: 0;
   padding: 10px;
   top: 10px;
   * {
@@ -39,6 +40,7 @@
     width: 50px;
     height: 40px;
     position: relative;
+    z-index: 100;
     &::after,
     &::before {
       content: '';
@@ -78,6 +80,7 @@
     margin-top: 30px;
   }
   @include media($vpmd) {
+    position: sticky;
     &__toggle {
       display: none;
     }

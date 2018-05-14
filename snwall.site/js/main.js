@@ -1,5 +1,9 @@
 import Slider from "./slider/slider";
+import scrollerPlugin from "./slider/scroller.min.js";
 import initMenu from "./menu/menu";
+
+scrollerPlugin();
+const Scroller = window.Scroller;
 
 const menu = document.querySelector(`.main-menu`);
 initMenu(menu);
@@ -24,7 +28,6 @@ const scroller3 = new Scroller({
   anchors: `hidden`,
   scrollbar: `hidden`
 });
-console.log(scroller1);
 const scrollLogos = () => {
   scroller3.scrollTo(`start`);
   scroller2.scrollTo(`end`);
@@ -37,8 +40,3 @@ const scrollLogos = () => {
 };
 scrollLogos();
 setInterval(scrollLogos, 17000);
-
-// const scroller2 = new Scroller({
-//   el: document.querySelector(`#scroller2`),
-//   anchors: `hidden`
-// });

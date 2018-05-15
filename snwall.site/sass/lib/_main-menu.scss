@@ -1,13 +1,21 @@
 .main-menu {
+
+  .logo {
+    img {
+      height: 30px;
+      width: auto;
+    }
+  }
+
   display: flex;
   flex-direction: column;
   align-items: stretch;
   position: fixed;
   background: $c-darkgrey;
-left: 0;
-right: 0;
+  left: 0;
+  right: 0;
   padding: 10px;
-  top: 10px;
+  top: 0px;
   * {
     transition-timing-function: linear;
   }
@@ -28,6 +36,13 @@ right: 0;
     color: $c-lightgrey;
     text-decoration: none;
     text-align: center;
+
+    &--active {
+      background-color: $c-lightgrey;
+      color: $c-darkgrey;
+      pointer-events: none;
+    }
+
     &:hover {
       background-color: $c-darkhover;
     }
@@ -38,7 +53,7 @@ right: 0;
     background: transparent;
     font-size: 0;
     width: 50px;
-    height: 40px;
+    height: 28px;
     position: relative;
     z-index: 100;
     &::after,
@@ -49,12 +64,12 @@ right: 0;
       left: 0;
       right: 0;
       background-color: $c-lightgrey;
-      height: 6px;
+      height: 4px;
       transition-duration: .3s;
     }
     &::after {
       top: 0;
-      box-shadow: 0 17px 0 0 $c-lightgrey;
+      box-shadow: 0 12px 0 0 $c-lightgrey;
     }
     &::before {
       bottom: 0;
@@ -79,7 +94,15 @@ right: 0;
   &--active &__caption {
     margin-top: 30px;
   }
+
   @include media($vpmd) {
+
+    .logo {
+      img {
+        height: 43px;
+        width: auto;
+      }
+    }
     position: sticky;
     &__toggle {
       display: none;

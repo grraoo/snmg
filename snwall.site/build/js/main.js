@@ -68,23 +68,115 @@ const initialSlides = [...document.querySelectorAll(`.slider__item`)];
 const initialControls = document.querySelector(`#slider__controls-wrap`);
 var advSlider = new Slider(initialSlides, initialControls, 5000);
 
-var initMenu = () => {
-  const menu = document.querySelector(`.main-menu`);
-  const menuToggle = menu.querySelector(`.main-menu__toggle`);
-  const menuItems = menu.querySelector(`.main-menu__items`);
-  const menuHeight = menuItems.offsetHeight;
+/**
+ * Smoothly scroll element to the given target (element.scrollTop) for the given duration
+ * @param {object} element element for scroll to
+ * @param {number} target position for element for scroll to (element.scrollTop)
+ * @param {number} duration time for scrolling
+ * @return {Promise} promise that's fulfilled when done, or rejected if
+    interrupted
+ */
+const smoothScrollTo = (element, target, duration) => {
+  target = Math.round(target);
+  duration = Math.round(duration);
+  if (duration < 0) {
+    return Promise.reject(`bad duration`);
+  }
+  if (duration === 0) {
+    element.scrollTop = target;
+    return Promise.resolve();
+  }
 
-  menuItems.style = `max-height: 0`;
+  const startTime = Date.now();
+  const endTime = startTime + duration;
 
-  const switchMenu = () => {
-    menu.classList.toggle(`main-menu--active`);
-    if (menu.classList.contains(`main-menu--active`)) {
-      menuItems.style = `max-height: ${menuHeight}px`;
-    } else {
-      menuItems.style = `max-height: 0`;
+  const startTop = element.scrollTop;
+  const distance = target - startTop;
+
+  // based on http://en.wikipedia.org/wiki/Smoothstep
+  const getSmoothStep = (start, end, point) => {
+    if (point <= start) {
+      return 0;
     }
+    if (point >= end) {
+      return 1;
+    }
+    const x = (point - start) / (end - start); // interpolation
+    return x * x * (3 - 2 * x);
   };
 
+  return new Promise(function (resolve, reject) {
+    // This is to keep track of where the element's scrollTop is supposed to be, based on what we're doing
+    let previousTop = element.scrollTop;
+
+    // This is like a think function from a game loop
+    const scrollFrame = function () {
+      if (element.scrollTop !== previousTop) {
+        reject(`interrupted`);
+        return;
+      }
+
+      // set the scrollTop for this frame
+      const now = Date.now();
+      const point = getSmoothStep(startTime, endTime, now);
+      const frameTop = Math.round(startTop + (distance * point));
+      element.scrollTop = frameTop;
+
+      // check if we're done!
+      if (now >= endTime) {
+        resolve();
+        return;
+      }
+
+      // If we were supposed to scroll but didn't, then we probably hit the limit, so consider it done; not interrupted.
+      if (element.scrollTop === previousTop &&
+        element.scrollTop !== frameTop) {
+        resolve();
+        return;
+      }
+      previousTop = element.scrollTop;
+
+      // schedule next frame for execution
+      setTimeout(scrollFrame, 0);
+    };
+
+    // boostrap the animation process
+    setTimeout(scrollFrame, 0);
+  });
+};
+
+const menu = document.querySelector(`.main-menu`);
+const menuToggle = menu.querySelector(`.main-menu__toggle`);
+const menuItems = menu.querySelector(`.main-menu__items`);
+const menuHeight = menuItems.offsetHeight;
+
+const switchMenu = () => {
+  menu.classList.toggle(`main-menu--active`);
+  if (menu.classList.contains(`main-menu--active`)) {
+    menuItems.style = `max-height: ${menuHeight}px`;
+  } else {
+    menuItems.style = `max-height: 0`;
+  }
+};
+
+const runSmoothScroll = (e) => {
+  if (e.target.classList.contains(`main-menu__link`) && e.target.href !== `#`) {
+    e.preventDefault();
+    const element = document.querySelector(e.target.getAttribute(`href`));
+    smoothScrollTo(document.documentElement, element.offsetTop, 2000).then(() => {
+      const currentLInk = document.querySelector(`.main-menu__link--active`);
+      if (currentLInk) {
+        currentLInk.classList.remove(`main-menu__link--active`);
+      }
+      e.target.classList.add(`main-menu__link--active`);
+    });
+  }
+};
+
+var initMenu = () => {
+  menuItems.style = `max-height: 0`;
+
+  menu.addEventListener(`click`, runSmoothScroll);
   menuToggle.addEventListener(`click`, switchMenu);
 };
 

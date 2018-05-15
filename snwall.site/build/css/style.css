@@ -189,7 +189,10 @@ table {
   left: 0;
   right: 0;
   padding: 10px;
-  top: 10px; }
+  top: 0px; }
+  .main-menu .logo img {
+    height: 30px;
+    width: auto; }
   .main-menu * {
     transition-timing-function: linear; }
   .main-menu__items {
@@ -207,6 +210,10 @@ table {
     color: #C0CED5;
     text-decoration: none;
     text-align: center; }
+    .main-menu__link--active {
+      background-color: #C0CED5;
+      color: #282D2E;
+      pointer-events: none; }
     .main-menu__link:hover {
       background-color: #313537; }
   .main-menu__toggle {
@@ -215,7 +222,7 @@ table {
     background: transparent;
     font-size: 0;
     width: 50px;
-    height: 40px;
+    height: 28px;
     position: relative;
     z-index: 100; }
     .main-menu__toggle::after, .main-menu__toggle::before {
@@ -225,11 +232,11 @@ table {
       left: 0;
       right: 0;
       background-color: #C0CED5;
-      height: 6px;
+      height: 4px;
       transition-duration: .3s; }
     .main-menu__toggle::after {
       top: 0;
-      box-shadow: 0 17px 0 0 #C0CED5; }
+      box-shadow: 0 12px 0 0 #C0CED5; }
     .main-menu__toggle::before {
       bottom: 0;
       width: 70%; }
@@ -757,7 +764,9 @@ table {
 body {
   font-family: Fira Sans, sans-serif;
   overflow-x: hidden;
-  width: 100%; }
+  width: 100%;
+  margin: 0;
+  padding: 0; }
 
 @media (min-width: 700px) {
     .svg-person #svg-girl-nb {
@@ -781,6 +790,9 @@ body {
     .main-menu {
       position: -webkit-sticky;
       position: sticky; }
+      .main-menu .logo img {
+        height: 43px;
+        width: auto; }
       .main-menu__toggle {
         display: none; }
       .main-menu__caption {

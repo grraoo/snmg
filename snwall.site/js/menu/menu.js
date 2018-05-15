@@ -1,19 +1,36 @@
-export default () => {
-  const menu = document.querySelector(`.main-menu`);
-  const menuToggle = menu.querySelector(`.main-menu__toggle`);
-  const menuItems = menu.querySelector(`.main-menu__items`);
-  const menuHeight = menuItems.offsetHeight;
+import smoothScrollTo from "../utils/smooth-scroll";
 
+const menu = document.querySelector(`.main-menu`);
+const menuToggle = menu.querySelector(`.main-menu__toggle`);
+const menuItems = menu.querySelector(`.main-menu__items`);
+const menuHeight = menuItems.offsetHeight;
+
+const switchMenu = () => {
+  menu.classList.toggle(`main-menu--active`);
+  if (menu.classList.contains(`main-menu--active`)) {
+    menuItems.style = `max-height: ${menuHeight}px`;
+  } else {
+    menuItems.style = `max-height: 0`;
+  }
+};
+
+const runSmoothScroll = (e) => {
+  if (e.target.classList.contains(`main-menu__link`) && e.target.href !== `#`) {
+    e.preventDefault();
+    const element = document.querySelector(e.target.getAttribute(`href`));
+    smoothScrollTo(document.documentElement, element.offsetTop, 2000).then(() => {
+      const currentLInk = document.querySelector(`.main-menu__link--active`);
+      if (currentLInk) {
+        currentLInk.classList.remove(`main-menu__link--active`);
+      }
+      e.target.classList.add(`main-menu__link--active`);
+    });
+  }
+};
+
+export default () => {
   menuItems.style = `max-height: 0`;
 
-  const switchMenu = () => {
-    menu.classList.toggle(`main-menu--active`);
-    if (menu.classList.contains(`main-menu--active`)) {
-      menuItems.style = `max-height: ${menuHeight}px`;
-    } else {
-      menuItems.style = `max-height: 0`;
-    }
-  };
-
+  menu.addEventListener(`click`, runSmoothScroll);
   menuToggle.addEventListener(`click`, switchMenu);
 };

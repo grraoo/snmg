@@ -1,7 +1,10 @@
 .works {
-  display: flex;
   margin: 0 -20px;
   counter-reset: work;
+  display: block;
+  @include media($vpmd) {
+    display: flex;
+  }
 }
 
 .work-stage {

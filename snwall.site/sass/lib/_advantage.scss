@@ -1,14 +1,19 @@
 .advantage {
-  display: flex;
+  display: block;
+  @include media($vpmd) {
+    display: flex;
+  }
   align-items: center;
   justify-content: flex-end;
-  padding-right: 80px;
-  padding-left: 0;
-  padding-top: 80px;
-  text-align: left;
-  &:not(:last-of-type) {
-    padding-bottom: 80px;
-    border-bottom: 1px solid $c-greyborder;
+  @include media($vpmd) {
+    padding-right: 80px;
+    padding-left: 0;
+    padding-top: 80px;
+    text-align: left;
+    &:not(:last-of-type) {
+      padding-bottom: 80px;
+      border-bottom: 1px solid $c-greyborder;
+    }
   }
   &:nth-child(even) {
     flex-direction: row-reverse;
@@ -22,28 +27,35 @@
       margin-left: 0;
     }
   }
-
   &__info {
-    width: 800px;
-    margin-left: 95px;
-    margin-right: 0;
+    @include media($vpmd) {
+      width: 800px;
+      margin-left: 95px;
+      margin-right: 0;
+    }
   }
   &__img-wrap {
-    width: calc(100% - 800px);
+    @include media($vpmd) {
+      width: calc(100% - 800px);
+      display: flex;
+    }
     overflow: hidden;
-    display: flex;
     justify-content: flex-end;
     align-self: stretch;
     &--center {
       justify-content: center;
     }
-
     img {
-      max-height: 800px;
-      width: auto;
+      max-width: 100%;
+      height: auto;
+    }
+    @include media($vpmd) {
+      img {
+        max-height: 800px;
+        width: auto;
+      }
     }
   }
-
   &__text {
     font-size: 24px;
     padding-top: 1em;

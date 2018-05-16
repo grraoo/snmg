@@ -1,19 +1,22 @@
 .contacts {
-  display: flex;
+  @include media($vpmd) {
+    display: flex;
+  }
   min-height: 100vh;
-.content__header {
-  text-align: left
-}
+  .content__header {
+    text-align: left
+  }
   &__info {
     padding: 30px;
-    width: 40%;
-    flex-basis: 40%;
+    @include media($vpmd) {
+      width: 40%;
+      flex-basis: 40%;
+    }
   }
   &__item {
     padding-left: 30px;
     position: relative;
     margin-bottom: 1em;
-
     &::before {
       content: "";
       background-image: url("../img/contacts-icons.png");
@@ -23,7 +26,6 @@
       top: 50%;
       transform: translateY(-50%);
     }
-
     &--address {
       &::before {
         width: 10px;
@@ -48,12 +50,10 @@
       }
     }
   }
-
   &__map {
     background: #777;
     flex-grow: 1;
     overflow: hidden;
-
     img {
       min-height: 100%;
     }

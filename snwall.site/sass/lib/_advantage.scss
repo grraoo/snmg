@@ -1,11 +1,11 @@
 .advantage {
   display: block;
-  @include media($vpmd) {
+  @include media($vpsm) {
     display: flex;
   }
   align-items: center;
   justify-content: flex-end;
-  @include media($vpmd) {
+  @include media($vpsm) {
     padding-right: 80px;
     padding-left: 0;
     padding-top: 80px;
@@ -28,15 +28,15 @@
     }
   }
   &__info {
-    @include media($vpmd) {
-      width: 800px;
+    @include media($vpsm) {
+      width: 50%;
       margin-left: 95px;
       margin-right: 0;
     }
   }
   &__img-wrap {
-    @include media($vpmd) {
-      width: calc(100% - 800px);
+    @include media($vpsm) {
+      width: 50%;
       display: flex;
     }
     overflow: hidden;
@@ -46,10 +46,11 @@
       justify-content: center;
     }
     img {
+      align-self: center;
       max-width: 100%;
       height: auto;
     }
-    @include media($vpmd) {
+    @include media($vpsm) {
       img {
         max-height: 800px;
         width: auto;

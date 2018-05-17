@@ -209,13 +209,14 @@ table {
     padding: 0.5em 15px;
     color: #C0CED5;
     text-decoration: none;
-    text-align: center; }
-    .main-menu__link--active {
+    text-align: center;
+    transition-duration: .3s; }
+    .main-menu__link:hover {
+      background-color: #313537; }
+    .main-menu__link--active, .main-menu__link--active:hover {
       background-color: #C0CED5;
       color: #282D2E;
       pointer-events: none; }
-    .main-menu__link:hover {
-      background-color: #313537; }
   .main-menu__toggle {
     border: 0;
     outline: 0;
@@ -259,7 +260,7 @@ table {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3; }
+  z-index: 6; }
 
 .wall-video {
   position: relative;
@@ -306,7 +307,7 @@ table {
     text-align: center; }
 
 .unit {
-  padding: 20px;
+  padding: 80px 20px;
   border-bottom: 1px solid #D7D7D7;
   text-align: center;
   position: relative; }
@@ -326,7 +327,7 @@ table {
   .work-stage__img-wrap {
     position: relative;
     display: flex;
-    height: 20vw;
+    min-height: 20vw;
     justify-content: center;
     align-items: flex-end; }
     .work-stage__img-wrap::after {
@@ -363,6 +364,7 @@ table {
       margin-right: 95px;
       margin-left: 0; }
   .advantage__img-wrap {
+    display: none;
     overflow: hidden;
     justify-content: flex-end;
     -ms-grid-row-align: stretch;
@@ -375,7 +377,7 @@ table {
       max-width: 100%;
       height: auto; }
   .advantage__text {
-    font-size: 24px;
+    font-size: 14px;
     padding-top: 1em; }
     .advantage__text p {
       margin-top: 1em; }
@@ -561,15 +563,14 @@ table {
   margin-top: 20px;
   margin-bottom: 20px; }
   .scroller__item {
-    height: 500px;
+    height: 290px;
     margin: 0 10px; }
     .scroller__item img {
       height: 100%;
       width: auto; }
     .scroller__item--text {
-      min-width: 430px;
-      flex-basis: 430px;
-      padding: 30px;
+      width: 280px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -577,7 +578,11 @@ table {
       text-align: center;
       background-color: #F7F1E2; }
   .scroller__number {
-    font-size: 88px; }
+    font-size: 80px; }
+  .scroller__text {
+    font-style: italic;
+    font-size: 20px;
+    text-align: center; }
 
 .logo-scroller {
   display: flex;
@@ -785,7 +790,11 @@ body {
         display: flex; }
       .advantage__img-wrap img {
         max-height: 800px;
-        width: auto; } }
+        width: auto; }
+      .advantage__text {
+        font-size: 16px; }
+      .scroller__item {
+        height: 340px; } }
 
 @media (min-width: 1260px) {
       .svg-person path, .svg-person polyline {
@@ -823,6 +832,8 @@ body {
         margin-top: 115px; }
       .content__header {
         font-size: 35px; }
+    .unit {
+      padding: 80px; }
     .unit--advantages {
       padding-left: 0;
       padding-right: 0; }
@@ -834,6 +845,17 @@ body {
         font-size: 24px; }
       .work-stage__text {
         font-size: 20px; }
+      .advantage__text {
+        font-size: 20px; }
+      .scroller__item {
+        height: 370px; }
+        .scroller__item--text {
+          width: 310px;
+          padding: 30px; }
+      .scroller__number {
+        font-size: 88px; }
+      .scroller__text {
+        font-size: 22px; }
     .contacts {
       display: flex; }
       .contacts__info {
@@ -850,7 +872,13 @@ body {
     .content__header {
       font-size: 40px; }
     .content__text {
-      font-size: 20px; } }
+      font-size: 20px; }
+      .advantage__text {
+        font-size: 24px; }
+      .scroller__item {
+        height: 500px; }
+        .scroller__item--text {
+          width: 430px; } }
 
 @media (min-width: 1900px) {
     .wall-video {

@@ -36,15 +36,16 @@
     color: $c-lightgrey;
     text-decoration: none;
     text-align: center;
-
-    &--active {
-      background-color: $c-lightgrey;
-      color: $c-darkgrey;
-      pointer-events: none;
-    }
+    transition-duration: .3s;
 
     &:hover {
       background-color: $c-darkhover;
+    }
+
+    &--active, &--active:hover {
+      background-color: $c-lightgrey;
+      color: $c-darkgrey;
+      pointer-events: none;
     }
   }
   &__toggle {

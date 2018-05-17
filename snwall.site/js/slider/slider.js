@@ -48,6 +48,7 @@ class Slider {
       this.nextRndSlide();
     }
   }
+
   getSlideById(id) {
     return this._slides.find((slide) => slide.dataset.slide === id);
   }

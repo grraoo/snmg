@@ -35,6 +35,7 @@
     }
   }
   &__img-wrap {
+    display: none;
     @include media($vpsm) {
       width: 50%;
       display: flex;
@@ -58,7 +59,17 @@
     }
   }
   &__text {
-    font-size: 24px;
+    font-size: 14px;
+    @include media($vpsm) {
+      font-size: 16px;
+    }
+    @include media($vpmd) {
+      font-size: 20px;
+    }
+    @include media($vplg) {
+      font-size: 24px;
+    }
+
     padding-top: 1em;
     p {
       margin-top: 1em;

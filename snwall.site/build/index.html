@@ -18,17 +18,17 @@
           <button class="main-menu__toggle main-menu__toggle--on">menu on/off</button>
         </section>
         <div class="main-menu__items">
-
-          <a class="main-menu__link main-menu__link--active" href="#top">Возможности</a>
-          <a class="main-menu__link" href="#">Кейсы</a>
-          <a class="main-menu__link" href="#">Как это работает</a>
-          <a class="main-menu__link" href="#">Стоимость</a>
+          <a class="main-menu__link main-menu__link--active" href="#hello">Возможности</a>
+          <a class="main-menu__link" href="#how">Как это работает</a>
+          <a class="main-menu__link" href="#advantages">Преимущества</a>
+          <a class="main-menu__link" href="#cases">Кейсы</a>
+          <a class="main-menu__link" href="#clients">Клиенты</a>
           <a class="main-menu__link" href="#contacts">Контакты</a>
         </div>
       </nav>
     </aside>
     <section class="content">
-      <section class="unit unit--hello">
+      <section class="unit unit--hello" id="hello">
         <figure class="wall-video">
           <video class="wall-video__src" id="wall-video" src="#"></video>
           <svg xmlns="http://www.w3.org/2000/svg" width="1255" height="602" viewBox="0 0 1255 602" class="svg-person">
@@ -99,9 +99,9 @@
           <p class="content__text">SNWall выводит на&nbsp;экраны фотографии, видео и&nbsp;сообщения из&nbsp;Facebook,
             «ВКонтакте», Instagram, Twitter, Google+ и&nbsp;других социальных сетей</p>
         </div>
-        <button class="scroll-down"></button>
+        <button class="scroll-down" id="scroll-down" href="#how"></button>
       </section>
-      <section class="unit unit--how">
+      <section class="unit unit--how" id="how">
         <h2 class="content__header">Как это работает</h2>
         <div class="works">
           <article class="work-stage">
@@ -127,7 +127,7 @@
           </article>
         </div>
       </section>
-      <section class="unit unit--advantages">
+      <section class="unit unit--advantages" id="advantages">
         <article class="advantage">
           <div class="advantage__img-wrap advantage__img-wrap--center">
             <img src="img/feature-illustration-1.png" alt="" width="568" height="793" class="advantage__img">
@@ -216,7 +216,7 @@
         </article>
       </section>
 
-      <section class="unit unit--cases">
+      <section class="unit unit--cases" id="cases">
         <aside class="rubric">Где ещё применялся SNWall</aside>
         <h2 class="content__header">SNWall на форумах, конфенренциях и выставках</h2>
         <p>В 2017 году SNWall транслировал сообщения из социальных сетей на ежегодной пресс-конференции с президентом России В. В. Путиным.</p>
@@ -239,7 +239,7 @@
           </div>
         </div>
       </section>
-      <section class="unit unit--other-cases">
+      <section class="unit unit--other-cases" id="other-cases">
         <aside class="rubric">Другие примеры использования</aside>
         <h2 class="content__header">SNWall на концертах, шоу и фестивалях</h2>
         <p>В 2017 году SNWall транслировал сообщения из социальных сетей на ежегодной пресс-конференции с президентом России В. В. Путиным.</p>
@@ -262,7 +262,7 @@
           </div>
         </div>
       </section>
-      <section class="unit unit--clients">
+      <section class="unit unit--clients" id="clients">
         <aside class="rubric">Наши клиенты</aside>
         <h2 class="content__header content__header--regular">За 6 лет преимуществами SNWall<br>воспользовались <span class="blue-text">более 400 клиентов</span></h2>
         <div class="logo-scroller" id="logo1" data-scrollbar="visible">
@@ -318,7 +318,7 @@
           <img src="//placehold.it/300x150?text=Logo" alt="">
         </div>
       </section>
-      <footer class="contacts" id="contacts">
+      <footer class="unit unit--contacts contacts" id="contacts">
         <section class="contacts__info">
           <h2 class="content__header">Контактная информация</h2>
           <div class="contacts__items">

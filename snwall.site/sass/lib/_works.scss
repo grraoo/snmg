@@ -1,9 +1,14 @@
 .works {
-  margin: 0 -20px;
+  // margin: 0 -20px;
   counter-reset: work;
   display: block;
+  width: calc(100% - 40px);
+  width: 100%;
+  // padding: 0px 20px;
   @include media($vpsm) {
+    padding: 0p;
     display: flex;
+    justify-content: space-around;
   }
 }
 
@@ -17,7 +22,7 @@
   &__img-wrap {
     position: relative;
     display: flex;
-    min-height: 20vw;
+    min-height: 27vw;
     justify-content: center;
     align-items: flex-end;
     @include media($vpmd) {

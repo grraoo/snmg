@@ -14,7 +14,7 @@
   &__input {
       height: 40px;
       width: 100%;
-      max-width: 350px;
+
       line-height: 40px;
       padding: 2px 0 0 15px;
       border: 1px solid #c0ced5;
@@ -23,13 +23,18 @@
       border-radius: 4px;
       margin-bottom: 1em;
       display: block;
+      @include media($vpsm) {
+        max-width: 350px;
+      }
 
       &--area {
         width: 100%;
-        max-width: 480px;
         line-height: 25px;
         min-height: 120px;
         padding: 8px 15px 0 15px;
+        @include media($vpsm) {
+          max-width: 480px;
+        }
       }
   }
 }

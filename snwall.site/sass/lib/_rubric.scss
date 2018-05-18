@@ -1,7 +1,16 @@
 .rubric {
   opacity: 0.5;
-  font-size: 24px;
-  letter-spacing: 4.5px;
+  letter-spacing: .2em;
   text-transform: uppercase;
   margin: .5em 0;
+  font-size: 14px;
+  @include media($vpmd) {
+    font-size: 16px;
+  }
+  @include media($vplg) {
+    font-size: 20px;
+  }
+  @include media($vpxl) {
+    font-size: 24px;
+  }
 }

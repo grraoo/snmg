@@ -210,7 +210,8 @@ table {
     color: #C0CED5;
     text-decoration: none;
     text-align: center;
-    transition-duration: .3s; }
+    transition-duration: .3s;
+    white-space: nowrap; }
     .main-menu__link:hover {
       background-color: #313537; }
     .main-menu__link--active, .main-menu__link--active:hover {
@@ -297,8 +298,6 @@ table {
     text-align: center;
     font-weight: 600;
     margin-bottom: .5em; }
-    .content__header--left {
-      text-align: left; }
     .content__header--regular {
       font-weight: 400; }
   .content__text {
@@ -311,11 +310,17 @@ table {
   border-bottom: 1px solid #D7D7D7;
   text-align: center;
   position: relative; }
+  .unit--advantages {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
+  .unit--contacts {
+    padding-right: 0 !important; }
 
 .works {
-  margin: 0 -20px;
   counter-reset: work;
-  display: block; }
+  display: block;
+  width: calc(100% - 40px);
+  width: 100%; }
 
 .work-stage {
   position: relative;
@@ -327,7 +332,7 @@ table {
   .work-stage__img-wrap {
     position: relative;
     display: flex;
-    min-height: 20vw;
+    min-height: 27vw;
     justify-content: center;
     align-items: flex-end; }
     .work-stage__img-wrap::after {
@@ -384,10 +389,10 @@ table {
 
 .rubric {
   opacity: 0.5;
-  font-size: 24px;
-  letter-spacing: 4.5px;
+  letter-spacing: .2em;
   text-transform: uppercase;
-  margin: .5em 0; }
+  margin: .5em 0;
+  font-size: 14px; }
 
 .ab_scroller, .ab_scroller * {
   -webkit-user-select: none;
@@ -633,7 +638,8 @@ table {
   .contacts__item {
     padding-left: 30px;
     position: relative;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    text-align: left; }
     .contacts__item::before {
       content: "";
       background-image: url("../img/contacts-icons.png");
@@ -698,7 +704,6 @@ table {
   .feedback__input {
     height: 40px;
     width: 100%;
-    max-width: 350px;
     line-height: 40px;
     padding: 2px 0 0 15px;
     border: 1px solid #c0ced5;
@@ -709,7 +714,6 @@ table {
     display: block; }
     .feedback__input--area {
       width: 100%;
-      max-width: 480px;
       line-height: 25px;
       min-height: 120px;
       padding: 8px 15px 0 15px; }
@@ -763,14 +767,20 @@ body {
       display: block; }
       .svg-person path, .svg-person polyline {
         stroke-width: 3; }
+      .content__header--left {
+        text-align: left; }
     .content__info {
       margin-top: 75px; }
     .content__header {
       font-size: 35px; }
     .content__text {
       font-size: 16px; }
+    .unit {
+      padding: 80px 40px; }
     .works {
-      display: flex; }
+      padding: 0p;
+      display: flex;
+      justify-content: space-around; }
     .advantage {
       display: flex; }
     .advantage {
@@ -794,7 +804,11 @@ body {
       .advantage__text {
         font-size: 16px; }
       .scroller__item {
-        height: 340px; } }
+        height: 340px; }
+      .feedback__input {
+        max-width: 350px; }
+        .feedback__input--area {
+          max-width: 480px; } }
 
 @media (min-width: 1260px) {
       .svg-person path, .svg-person polyline {
@@ -806,6 +820,8 @@ body {
     .main-menu {
       position: -webkit-sticky;
       position: sticky; }
+      .main-menu--active .main-menu__caption {
+        margin-top: 0; }
       .main-menu .logo img {
         height: 43px;
         width: auto; }
@@ -833,10 +849,7 @@ body {
       .content__header {
         font-size: 35px; }
     .unit {
-      padding: 80px; }
-    .unit--advantages {
-      padding-left: 0;
-      padding-right: 0; }
+      padding: 80px 60px; }
       .work-stage__img-wrap {
         height: 300px; }
       .work-stage__img {
@@ -847,6 +860,8 @@ body {
         font-size: 20px; }
       .advantage__text {
         font-size: 20px; }
+    .rubric {
+      font-size: 16px; }
       .scroller__item {
         height: 370px; }
         .scroller__item--text {
@@ -873,8 +888,12 @@ body {
       font-size: 40px; }
     .content__text {
       font-size: 20px; }
+    .unit {
+      padding: 80px 70px; }
       .advantage__text {
         font-size: 24px; }
+    .rubric {
+      font-size: 20px; }
       .scroller__item {
         height: 500px; }
         .scroller__item--text {
@@ -888,4 +907,8 @@ body {
     .content__header {
       font-size: 50px; }
     .content__text {
+      font-size: 24px; }
+    .unit {
+      padding: 80px; }
+    .rubric {
       font-size: 24px; } }

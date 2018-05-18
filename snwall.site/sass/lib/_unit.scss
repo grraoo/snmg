@@ -3,13 +3,23 @@
   border-bottom: 1px solid $c-greyborder;
   text-align: center;
   position: relative;
+  @include media($vpsm) {
+    padding: 80px 40px;
+  }
   @include media($vpmd) {
+    padding: 80px 60px;
+  }
+  @include media($vplg) {
+    padding: 80px 70px;
+  }
+  @include media($vpxl) {
     padding: 80px;
   }
   &--advantages {
-    @include media($vpmd) {
-      padding-left: 0;
-      padding-right: 0;
-    }
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  &--contacts {
+    padding-right: 0 !important;
   }
 }

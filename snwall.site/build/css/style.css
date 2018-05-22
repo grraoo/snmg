@@ -314,7 +314,9 @@ table {
     padding-left: 0 !important;
     padding-right: 0 !important; }
   .unit--contacts {
-    padding-right: 0 !important; }
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important; }
 
 .works {
   counter-reset: work;
@@ -595,7 +597,7 @@ table {
   height: 150px;
   margin: 0px -80px; }
   .logo-scroller .ab_scroller-strip {
-    transition-duration: 7s; }
+    transition-duration: 0; }
   .logo-scroller img {
     margin: 10px;
     height: 100%;
@@ -634,7 +636,8 @@ table {
   .contacts .content__header {
     text-align: left; }
   .contacts__info {
-    padding: 30px; }
+    padding-top: 3em;
+    padding-bottom: 3em; }
   .contacts__item {
     padding-left: 30px;
     position: relative;
@@ -696,7 +699,8 @@ table {
     pointer-events: none; }
 
 .feedback {
-  display: block; }
+  display: block;
+  text-align: left; }
   .feedback__headline {
     display: block;
     font-size: 1.5em;

@@ -1,6 +1,7 @@
 import smoothScrollTo from "../utils/smooth-scroll";
-
+let isScrolling = false;
 const SCROLL_TIME = 2000;
+let lastScrollTop = document.documentElement.scrollTop;
 
 const menu = document.querySelector(`.main-menu`);
 const menuToggle = menu.querySelector(`.main-menu__toggle`);
@@ -22,20 +23,34 @@ const reActivateLink = (link) => {
   }
   link.classList.add(`main-menu__link--active`);
 };
+const activateLinkByScroll = (e) => {
+  // setInterval(() => {
+  let tempCurrentUnit = units.find((unit) => unit.top() <= document.documentElement.scrollTop + 50);
 
-window.addEventListener(`scroll`, (e) => {
-  setInterval(() => {
-    let tempCurrentUnit = units.find((unit) => unit.top() <= document.documentElement.scrollTop + 50);
-
-    if (currentUnit !== tempCurrentUnit) {
-      currentUnit = tempCurrentUnit;
-      const link = document.querySelector(`a[href="${currentUnit.id}"]`);
-      if (link) {
-        reActivateLink(link);
-      }
+  if (currentUnit !== tempCurrentUnit) {
+    currentUnit = tempCurrentUnit;
+    const link = document.querySelector(`a[href="${currentUnit.id}"]`);
+    if (link) {
+      reActivateLink(link);
     }
-  }, 30);
-});
+  }
+  // if (lastScrollTop < document.documentElement.scrollTop && !isScrolling) {
+  //   const unitScrollTo = units.find((unit) => (unit.top() <= document.documentElement.scrollTop + (window.innerHeight / 2)) && unit.top() > document.documentElement.scrollTop + 50);
+  //   if (unitScrollTo) {
+  //     e.preventDefault();
+  //     isScrolling = true;
+  //     smoothScrollTo(document.documentElement, unitScrollTo.top(), 350).then(() => {
+  //       isScrolling = false;
+  //     }).catch((error) => {
+  //       isScrolling = false;
+  //       console.log(error);
+  //     });
+  //   }
+  // }
+  lastScrollTop = document.documentElement.scrollTop;
+  // }, 30);
+};
+window.addEventListener(`scroll`, activateLinkByScroll);
 
 const switchMenu = () => {
   menu.classList.toggle(`main-menu--active`);
@@ -51,7 +66,14 @@ const runSmoothScroll = (e) => {
   if (e.target.href && e.target.getAttribute(`href`).length > 1) {
     e.preventDefault();
     const element = document.querySelector(e.target.getAttribute(`href`));
-    smoothScrollTo(document.documentElement, element.offsetTop, SCROLL_TIME).then(switchMenu).catch();
+    console.log(scrollBtn, element);
+    isScrolling = true;
+    smoothScrollTo(document.documentElement, element.offsetTop, SCROLL_TIME).then(() => {
+      isScrolling = false;
+    }).then(switchMenu).catch((error) => {
+      isScrolling = false;
+      console.log(error);
+    });
   }
 };
 export default () => {

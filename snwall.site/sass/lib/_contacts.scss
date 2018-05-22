@@ -7,7 +7,8 @@
     text-align: left
   }
   &__info {
-    padding: 30px;
+    padding-top: 3em;
+    padding-bottom: 3em;
     @include media($vpmd) {
       width: 40%;
       flex-basis: 40%;

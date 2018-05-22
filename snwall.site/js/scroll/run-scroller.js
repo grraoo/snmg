@@ -1,51 +1,45 @@
 import scrollerPlugin from "./scroller.min.js";
+
+scrollerPlugin();
+const Scroller = window.Scroller;
+
+const scroller1 = new Scroller({
+  el: document.querySelector(`#logo1`),
+  anchors: `hidden`,
+  scrollbar: `hidden`
+});
+const scroller2 = new Scroller({
+  el: document.querySelector(`#logo2`),
+  anchors: `hidden`,
+  scrollbar: `hidden`
+});
+const scroller3 = new Scroller({
+  el: document.querySelector(`#logo3`),
+  anchors: `hidden`,
+  scrollbar: `hidden`
+});
+
+const windowHeight = () => document.documentElement.clientHeight - 150;
+const scrollerWidth = (scroller) => scroller.state.limitRight;
+const scrollerOffset = (scroller) => scroller.state.el.getBoundingClientRect().top;
+const scrollerPosition = (scroller) => ((scrollerOffset(scroller) - windowHeight()) / windowHeight()) * (-1);
+
+const runScroller = (scroller) => {
+  if (scrollerOffset(scroller) > 20 && scrollerOffset(scroller) < windowHeight()) {
+    scroller.scrollTo(scrollerPosition(scroller) * scrollerWidth(scroller));
+  } else if (scrollerOffset(scroller) <= 20 && scrollerOffset(scroller) > -60) {
+    scroller.scrollTo(`end`);
+  } else if (scrollerOffset(scroller) >= windowHeight() && scrollerOffset(scroller) < windowHeight() - 150) {
+    scroller.scrollTo(`start`);
+  }
+};
+
+const runScrollers = () => {
+  runScroller(scroller1);
+  runScroller(scroller2);
+  runScroller(scroller3);
+};
+
 export default () => {
-  scrollerPlugin();
-  const Scroller = window.Scroller;
-
-  const scroller1 = new Scroller({
-    el: document.querySelector(`#logo1`),
-    anchors: `hidden`,
-    scrollbar: `hidden`
-  });
-  const scroller2 = new Scroller({
-    el: document.querySelector(`#logo2`),
-    anchors: `hidden`,
-    scrollbar: `hidden`
-  });
-  const scroller3 = new Scroller({
-    el: document.querySelector(`#logo3`),
-    anchors: `hidden`,
-    scrollbar: `hidden`
-  });
-
-  /**
-   * @param {Object} scroller Scroller object
-   * @param {number} time period time
-   * @param {string} from start position of scroller
-   * @param {string} to finish position of scroller
-   */
-  const runScrollCadence = (scroller, time, from, to) => {
-    scroller.scrollTo(from);
-    setTimeout(() => {
-      scroller.scrollTo(to);
-    }, time * 0.48);
-  };
-
-  /**
-   * @param {Object} scroller Scroller object
-   * @param {number} time period time
-   * @param {string} from start position of scroller
-   * @param {string} to finish position of scroller
-   */
-  const runScrollLogos = (scroller, time, from, to) => {
-    runScrollCadence(scroller, time, from, to);
-    setInterval(() => {
-      runScrollCadence(scroller, time, from, to);
-    }, time);
-  };
-  runScrollLogos(scroller1, 17000, `start`, `end`);
-  runScrollLogos(scroller2, 17000, `end`, `start`);
-  runScrollLogos(scroller3, 17000, `start`, `end`);
-
+  window.addEventListener(`scroll`, runScrollers);
 };

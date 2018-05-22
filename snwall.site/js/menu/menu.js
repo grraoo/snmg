@@ -9,7 +9,6 @@ const menuHeight = menuItems.offsetHeight;
 
 const units = [...document.querySelectorAll(`.unit`)].map((unit) => {
   return {
-    element: unit,
     id: `#${unit.id}`,
     top: () => unit.offsetTop
   };
@@ -25,15 +24,17 @@ const reActivateLink = (link) => {
 };
 
 window.addEventListener(`scroll`, (e) => {
+  setInterval(() => {
+    let tempCurrentUnit = units.find((unit) => unit.top() <= document.documentElement.scrollTop + 50);
 
-  let tempCurrentUnit = units.find((unit) => unit.top() <= document.documentElement.scrollTop + 50);
-  if (currentUnit !== tempCurrentUnit) {
-    currentUnit = tempCurrentUnit;
-    const link = document.querySelector(`a[href="${currentUnit.id}"]`);
-    if (link) {
-      reActivateLink(link);
+    if (currentUnit !== tempCurrentUnit) {
+      currentUnit = tempCurrentUnit;
+      const link = document.querySelector(`a[href="${currentUnit.id}"]`);
+      if (link) {
+        reActivateLink(link);
+      }
     }
-  }
+  }, 30);
 });
 
 const switchMenu = () => {
@@ -47,7 +48,7 @@ const switchMenu = () => {
 const scrollBtn = document.getElementById(`scroll-down`);
 
 const runSmoothScroll = (e) => {
-  if (e.target.getAttribute(`href`).length > 1) {
+  if (e.target.href && e.target.getAttribute(`href`).length > 1) {
     e.preventDefault();
     const element = document.querySelector(e.target.getAttribute(`href`));
     smoothScrollTo(document.documentElement, element.offsetTop, SCROLL_TIME).then(switchMenu).catch();

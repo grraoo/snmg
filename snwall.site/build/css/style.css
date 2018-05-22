@@ -307,7 +307,7 @@ table {
 
 .unit {
   padding: 80px 20px;
-  border-bottom: 1px solid #D7D7D7;
+  border-bottom: 1px solid #fafafa;
   text-align: center;
   position: relative; }
   .unit--advantages {
@@ -332,7 +332,7 @@ table {
   .work-stage__img-wrap {
     position: relative;
     display: flex;
-    min-height: 27vw;
+    min-height: 26vw;
     justify-content: center;
     align-items: flex-end; }
     .work-stage__img-wrap::after {
@@ -665,9 +665,13 @@ table {
   .contacts__map {
     background: #777;
     flex-grow: 1;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
     .contacts__map img {
-      min-height: 100%; }
+      min-height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%; }
 
 .btn {
   display: inline-block;
@@ -790,9 +794,9 @@ body {
       text-align: left; }
       .advantage:not(:last-of-type) {
         padding-bottom: 80px;
-        border-bottom: 1px solid #D7D7D7; }
+        border-bottom: 1px solid #fafafa; }
     .advantage__info {
-      width: 50%;
+      width: calc(50% - 95px);
       margin-left: 95px;
       margin-right: 0; }
       .advantage__img-wrap {
@@ -851,7 +855,8 @@ body {
     .unit {
       padding: 80px 60px; }
       .work-stage__img-wrap {
-        height: 300px; }
+        height: 300px;
+        min-height: 0; }
       .work-stage__img {
         max-width: 300px; }
       .work-stage__header {

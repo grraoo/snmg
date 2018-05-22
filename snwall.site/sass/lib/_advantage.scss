@@ -29,7 +29,7 @@
   }
   &__info {
     @include media($vpsm) {
-      width: 50%;
+      width: calc(50% - 95px);
       margin-left: 95px;
       margin-right: 0;
     }

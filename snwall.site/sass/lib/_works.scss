@@ -22,11 +22,12 @@
   &__img-wrap {
     position: relative;
     display: flex;
-    min-height: 27vw;
+    min-height: 26vw;
     justify-content: center;
     align-items: flex-end;
     @include media($vpmd) {
       height: 300px;
+      min-height: 0;
     }
     &::after {
       counter-increment: work;

@@ -44,7 +44,7 @@ const smoothScrollTo = (element, target, duration) => {
     const scrollFrame = function () {
       if (element.scrollTop !== previousTop) {
         // console.log(`interrupted`);
-        // clearInterval(scrollInterval);
+        clearInterval(scrollInterval);
 
         reject(`interrupted`);
         return;
@@ -67,10 +67,10 @@ const smoothScrollTo = (element, target, duration) => {
       // If we were supposed to scroll but didn't, then we probably hit the limit, so consider it done; not interrupted.
       if (element.scrollTop === previousTop &&
         element.scrollTop !== frameTop) {
-        console.log(`resolve2`);
+        // console.log(`resolve2`);
         // clearInterval(scrollInterval);
 
-        resolve();
+        // resolve();
         return;
       }
       previousTop = element.scrollTop;

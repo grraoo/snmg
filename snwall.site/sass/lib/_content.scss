@@ -9,12 +9,12 @@
     position: relative;
     z-index: 2;
     margin-top: 55px;
-    padding: 0 20px;
+    padding: 0 10%;
   }
   &__header {
     font-size: 4.5vw;
     letter-spacing: 0;
-    line-height: 1.4;
+    line-height: 1.15;
     text-align: center;
     font-weight: 600;
     margin-bottom: .5em;
@@ -53,6 +53,7 @@
     }
     &__header {
       font-size: 35px;
+      line-height: 40px;
     }
   }
   @include media($vplg) {
@@ -61,6 +62,7 @@
     }
     &__header {
       font-size: 40px;
+      line-height: 45px;
     }
     &__text {
       font-size: 20px;
@@ -72,6 +74,7 @@
     }
     &__header {
       font-size: 50px;
+      line-height: 55px;
     }
     &__text {
       font-size: 24px;

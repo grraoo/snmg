@@ -24,10 +24,12 @@
   }
 
   &__controls {
+    transform: translateY(50%);
     position: absolute;
-    bottom: -150px;
+    bottom: -13vw;
     display: flex;
-    right: 50px;
+    align-items: center;
+    right: 5vw;
     z-index: 3;
   }
 
@@ -45,6 +47,8 @@
 
     &-radio:checked + & {
       background: blue;
+      width: 100px;
+      height: 100px;
     }
   }
 }

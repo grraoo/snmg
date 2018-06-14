@@ -163,7 +163,7 @@ table {
 
 .svg-person {
   position: absolute;
-  bottom: -25%;
+  bottom: -38%;
   left: 50%;
   transform: translateX(-50%);
   width: 145%;
@@ -270,12 +270,14 @@ table {
   .wall-video::before {
     content: '';
     border-radius: 5px;
-    padding-top: 56.4461694%;
+    padding-top: 56.5%;
     background-color: #0F86E1;
     display: block; }
   .wall-video__src {
+    filter: blur(0.5px);
     position: absolute;
     top: 0;
+    overflow: hidden;
     left: 0;
     width: 100%;
     height: 100%; }
@@ -290,11 +292,11 @@ table {
     position: relative;
     z-index: 2;
     margin-top: 55px;
-    padding: 0 20px; }
+    padding: 0 10%; }
   .content__header {
     font-size: 4.5vw;
     letter-spacing: 0;
-    line-height: 1.4;
+    line-height: 1.15;
     text-align: center;
     font-weight: 600;
     margin-bottom: .5em; }
@@ -317,6 +319,8 @@ table {
     padding-right: 0 !important;
     padding-bottom: 0 !important;
     padding-top: 0 !important; }
+  .unit--hello {
+    padding-top: 40px !important; }
 
 .works {
   counter-reset: work;
@@ -372,7 +376,6 @@ table {
       margin-left: 0; }
   .advantage__img-wrap {
     display: none;
-    overflow: hidden;
     justify-content: flex-end;
     -ms-grid-row-align: stretch;
         align-self: stretch; }
@@ -745,10 +748,12 @@ table {
     .slider__item img {
       max-height: 100%; }
   .slider__controls {
+    transform: translateY(50%);
     position: absolute;
-    bottom: -150px;
+    bottom: -13vw;
     display: flex;
-    right: 50px;
+    align-items: center;
+    right: 5vw;
     z-index: 3; }
   .slider__control {
     width: 50px;
@@ -761,7 +766,9 @@ table {
     .slider__control-radio {
       display: none; }
     .slider__control-radio:checked + .slider__control {
-      background: blue; }
+      background: blue;
+      width: 100px;
+      height: 100px; }
 
 body {
   font-family: Fira Sans, sans-serif;
@@ -855,7 +862,8 @@ body {
       .content__info {
         margin-top: 115px; }
       .content__header {
-        font-size: 35px; }
+        font-size: 35px;
+        line-height: 40px; }
     .unit {
       padding: 80px 60px; }
       .work-stage__img-wrap {
@@ -894,7 +902,8 @@ body {
     .content__info {
       margin-top: 125px; }
     .content__header {
-      font-size: 40px; }
+      font-size: 40px;
+      line-height: 45px; }
     .content__text {
       font-size: 20px; }
     .unit {
@@ -914,7 +923,8 @@ body {
     .content__info {
       margin-top: 140px; }
     .content__header {
-      font-size: 50px; }
+      font-size: 50px;
+      line-height: 55px; }
     .content__text {
       font-size: 24px; }
     .unit {

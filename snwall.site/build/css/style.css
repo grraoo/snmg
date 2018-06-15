@@ -272,7 +272,10 @@ table {
     border-radius: 5px;
     padding-top: 56.5%;
     background-color: #0F86E1;
-    display: block; }
+    display: block;
+    background-image: url("../img/wall-bg.jpg");
+    background-size: contain;
+    background-position: center; }
   .wall-video__src {
     filter: blur(0.5px);
     position: absolute;
@@ -283,7 +286,6 @@ table {
     height: 100%; }
 
 .content {
-  padding-top: 30px;
   color: #282D2E;
   width: 1170px;
   max-width: 100%;

@@ -222,7 +222,7 @@ const runSmoothScroll = (e) => {
     e.preventDefault();
     // window.removeEventListener(`scroll`, autoScroll);
     const element = document.querySelector(e.target.getAttribute(`href`));
-    smoothScrollTo(document.documentElement, element.offsetTop, SCROLL_TIME).then(() => {}).then(switchMenu).catch((error) => {
+    smoothScrollTo(document.documentElement, element.offsetTop, SCROLL_TIME).then(switchMenu).catch((error) => {
       console.log(error);
     }).then(() => {
       // window.addEventListener(`scroll`, autoScroll);

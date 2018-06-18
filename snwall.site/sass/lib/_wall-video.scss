@@ -1,6 +1,7 @@
 .wall-video {
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 1em;
+  max-width: 80vmin;
   &::before {
     content: '';
     border-radius: 5px;

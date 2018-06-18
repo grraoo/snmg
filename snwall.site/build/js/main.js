@@ -158,6 +158,19 @@ const smoothScrollTo = (element, target, duration) => {
 
 const SCROLL_TIME = 2000;
 // let lastScrollTop = document.documentElement.scrollTop;
+// const autoScroll = (e) => {
+//   if (lastScrollTop < document.documentElement.scrollTop) {
+//     const unitScrollTo = units.find((unit) => (unit.top() <= document.documentElement.scrollTop + (window.innerHeight / 2)) && unit.top() > document.documentElement.scrollTop + 50);
+//     if (unitScrollTo) {
+//       smoothScrollTo(document.documentElement, unitScrollTo.top(), 250).then(() => {}).catch((error) => {
+//         console.log(error);
+//       });
+//     }
+//   }
+//   lastScrollTop = document.documentElement.scrollTop;
+// };
+
+// window.addEventListener(`scroll`, autoScroll);
 
 const menu = document.querySelector(`.main-menu`);
 const menuToggle = menu.querySelector(`.main-menu__toggle`);
@@ -191,21 +204,7 @@ const activateLinkByScroll = (e) => {
   }
 };
 
-// const autoScroll = (e) => {
-//   if (lastScrollTop < document.documentElement.scrollTop) {
-//     const unitScrollTo = units.find((unit) => (unit.top() <= document.documentElement.scrollTop + (window.innerHeight / 2)) && unit.top() > document.documentElement.scrollTop + 50);
-//     if (unitScrollTo) {
-//       smoothScrollTo(document.documentElement, unitScrollTo.top(), 250).then(() => {}).catch((error) => {
-//         console.log(error);
-//       });
-//     }
-//   }
-//   lastScrollTop = document.documentElement.scrollTop;
-// };
-
-// window.addEventListener(`scroll`, autoScroll);
 window.addEventListener(`scroll`, activateLinkByScroll);
-
 
 const switchMenu = () => {
   menu.classList.toggle(`main-menu--active`);
@@ -222,7 +221,10 @@ const runSmoothScroll = (e) => {
     e.preventDefault();
     // window.removeEventListener(`scroll`, autoScroll);
     const element = document.querySelector(e.target.getAttribute(`href`));
-    smoothScrollTo(document.documentElement, element.offsetTop, SCROLL_TIME).then(switchMenu).catch((error) => {
+    smoothScrollTo(document.documentElement, element.offsetTop, SCROLL_TIME).then(switchMenu).then(() => {
+      menu.classList.remove(`main-menu--active`);
+      menuItems.style = `max-height: 0`;
+    }).catch((error) => {
       console.log(error);
     }).then(() => {
       // window.addEventListener(`scroll`, autoScroll);

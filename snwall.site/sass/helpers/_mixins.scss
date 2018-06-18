@@ -3,3 +3,14 @@
     @content;
   }
 }
+
+@mixin minh-media($px) {
+  @media (min-height: $px) {
+    @content;
+  }
+}
+@mixin maxh-media($px) {
+  @media (max-height: $px) {
+    @content;
+  }
+}

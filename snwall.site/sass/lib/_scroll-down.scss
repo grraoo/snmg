@@ -1,25 +1,40 @@
+@keyframes scrolLDown{
+  0% {
+    transform: translate(-50%, -70%) rotate(-45deg);
+  }
+  25% {
+    transform: translate(-50%, -70%) rotate(-45deg) scale(1.1);
+  }
+  75% {
+    transform: translate(-50%, -70%) rotate(-45deg) scale(0.9);
+  }
+  100% {
+    transform: translate(-50%, -70%) rotate(-45deg);
+  }
+}
+
 .scroll-down {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   width: 60px;
   height: 60px;
+  display: block;
   outline: 0;
   border: 0;
   background-color: transparent;
   cursor: pointer;
+  margin: 1em auto 0;
 
   &::after {
     content: '';
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform-origin: center;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    border-left: 2px solid $c-lightgrey;
-    border-bottom: 2px solid $c-lightgrey;
+    transform: translate(-50%, -70%) rotate(-45deg);
+    border-left: 3px solid $c-lightgrey;
+    border-bottom: 3px solid $c-lightgrey;
     width: 20px;
     height: 20px;
+    animation: scrolLDown 2s linear infinite;
   }
 }

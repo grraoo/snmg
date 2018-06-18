@@ -26,5 +26,21 @@
   }
   &--hello {
     padding-top: 40px !important;
+    padding-bottom: 0px !important;
+    @include media($vpmd) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: calc(100vh);
+    }
+    .content__info {
+      margin-top: 5em;
+      @include media($vpmd) {
+        margin-top: auto;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }

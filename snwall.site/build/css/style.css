@@ -265,7 +265,8 @@ table {
 
 .wall-video {
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 1em;
+  max-width: 80vmin;
   width: 80%; }
   .wall-video::before {
     content: '';
@@ -322,7 +323,13 @@ table {
     padding-bottom: 0 !important;
     padding-top: 0 !important; }
   .unit--hello {
-    padding-top: 40px !important; }
+    padding-top: 40px !important;
+    padding-bottom: 0px !important; }
+    .unit--hello .content__info {
+      margin-top: 5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
 
 .works {
   counter-reset: work;
@@ -613,28 +620,38 @@ table {
 .blue-text {
   color: #0F86E1; }
 
+@keyframes scrolLDown {
+  0% {
+    transform: translate(-50%, -70%) rotate(-45deg); }
+  25% {
+    transform: translate(-50%, -70%) rotate(-45deg) scale(1.1); }
+  75% {
+    transform: translate(-50%, -70%) rotate(-45deg) scale(0.9); }
+  100% {
+    transform: translate(-50%, -70%) rotate(-45deg); } }
+
 .scroll-down {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   width: 60px;
   height: 60px;
+  display: block;
   outline: 0;
   border: 0;
   background-color: transparent;
-  cursor: pointer; }
+  cursor: pointer;
+  margin: 1em auto 0; }
   .scroll-down::after {
     content: '';
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform-origin: center;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    border-left: 2px solid #C0CED5;
-    border-bottom: 2px solid #C0CED5;
+    transform: translate(-50%, -70%) rotate(-45deg);
+    border-left: 3px solid #C0CED5;
+    border-bottom: 3px solid #C0CED5;
     width: 20px;
-    height: 20px; }
+    height: 20px;
+    animation: scrolLDown 2s linear infinite; }
 
 .contacts {
   min-height: 100vh; }
@@ -789,7 +806,7 @@ body {
     .content__info {
       margin-top: 75px; }
     .content__header {
-      font-size: 35px; }
+      font-size: 30px; }
     .content__text {
       font-size: 16px; }
     .unit {
@@ -868,6 +885,13 @@ body {
         line-height: 40px; }
     .unit {
       padding: 80px 60px; }
+      .unit--hello {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: calc(100vh); }
+        .unit--hello .content__info {
+          margin-top: auto; }
       .work-stage__img-wrap {
         height: 300px;
         min-height: 0; }
